@@ -3,7 +3,7 @@
 #include <ESP8266WiFi.h>
 #include <IRsend.h> 
 
-IRsend irsend(0); //an IR led is connected to GPIO pin 0
+IRsend irsend(5); //an IR led is connected to GPIO pin 0
 
 // wifi connection variables
 const char* ssid = "Grube";

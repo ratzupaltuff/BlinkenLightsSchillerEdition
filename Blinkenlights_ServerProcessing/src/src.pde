@@ -7,9 +7,9 @@ import hypermedia.net.*;
 UDP udp; // define the UDP object
 
 //layout on wall
-String ip11 = "192.168.3.139";   String ip12 = "192.168.3.139";   String ip13 = "192.168.3.139"; 
+String ip11 = "192.168.3.139";   String ip12 = "192.168.3.139";   String ip13 = "192.168.3.139";
 String ip21 = "192.168.3.139";   String ip22 = "192.168.3.139";   String ip23 = "192.168.3.139";
-String ip31 = "192.168.3.139";   String ip32 = "192.168.3.139";   String ip33 = "192.168.3.139"; 
+String ip31 = "192.168.3.139";   String ip32 = "192.168.3.139";   String ip33 = "192.168.3.139";
 
 int port = 8881; // the destination port
 
@@ -20,7 +20,7 @@ int flicker = 0;
 int held = 0;
 boolean transferedsuccessful = false;
 
-//layout on sender 
+//layout on sender
 String brighter = "0xF700FF";        String lower = "0xF7807F";            String off = "0xF740BF";           String on = "0xF7C03F";
 
 String red = "0xF720DF";             String green = "0xF7A05F";            String blue = "0xF7609F";          String white = "0xF7E01F";
@@ -42,7 +42,7 @@ void setup() {
   udp.listen( true ); // and wait for incoming message
   sendudp(on);
   println("Setup finished");
-  
+
 }
 
 void draw(){
@@ -52,7 +52,7 @@ void keyPressed() {
 
   if (key == 'f'){
         sendudp(red);
-  } 
+  }
 }
 
 void rainbow(){

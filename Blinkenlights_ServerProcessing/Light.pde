@@ -4,7 +4,7 @@ class Light{
 
     Light(String ipAddr){
         this.ipAddr=ipAddr;
-        currentColor=new Color(0);
+        currentColor=new Color(15);
     }
 
     public String getIpAddr(){
@@ -15,7 +15,7 @@ class Light{
         return currentColor;
     }
 
-    public void changeColor(Color c){
+    public void setColor(Color c){
         currentColor=c;
     }
 

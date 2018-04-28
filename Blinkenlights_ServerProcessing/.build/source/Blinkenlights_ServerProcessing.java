@@ -62,27 +62,30 @@ public void setup() {
 }
 
 public void draw() {  // draw() loops forever, until stopped
+  background(0xffFFFFFF);
   for(int i=300;i <=900; i=i+300){
     line(i,0,i,900);
   }
   for(int i=300;i <=900; i=i+300){
     line(0,i,900,i);
   }
+
   for(int i=0;i <3; i++){
     for(int j=0;j <3; j++){
+      fill(lightMatrix.getLight(j+1,i+1).getCurrentColor().getHex());
+      rect(i*300,j*300,300,300);
       fill(0,0,0);
       text("IP= "+ lightMatrix.getLight(j+1,i+1).getIpAddr(), i*300+20, j*300+20);
+      text("Color= "+ lightMatrix.getLight(j+1,i+1).getCurrentColor().getName(), i*300+20, j*300+32);
     }
   }
-
 }
 
 public void keyPressed() {
 
   if (key == 'f'){
         //sendudp(red.code);
-        fill(red.hex);
-        rect(0,0,300,300);
+        lightMatrix.getLight(1,2).setColor(red);
   }
 }
 
@@ -96,8 +99,7 @@ public void keyReleased(){
   if (key != 'f'){
     if (flicker == 0){
       //sendudp(green);
-      fill(green.hex);
-      rect(0,0,300,300);
+      lightMatrix.getLight(1,3).setColor(green);
       held = 1;
     }
   }
@@ -213,7 +215,7 @@ class Light{
 
     Light(String ipAddr){
         this.ipAddr=ipAddr;
-        currentColor=new Color(0);
+        currentColor=new Color(15);
     }
 
     public String getIpAddr(){
@@ -224,7 +226,7 @@ class Light{
         return currentColor;
     }
 
-    public void changeColor(Color c){
+    public void setColor(Color c){
         currentColor=c;
     }
 

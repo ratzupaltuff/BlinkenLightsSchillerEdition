@@ -44,27 +44,30 @@ void setup() {
 }
 
 void draw() {  // draw() loops forever, until stopped
+  background(#FFFFFF);
   for(int i=300;i <=900; i=i+300){
     line(i,0,i,900);
   }
   for(int i=300;i <=900; i=i+300){
     line(0,i,900,i);
   }
+
   for(int i=0;i <3; i++){
     for(int j=0;j <3; j++){
+      fill(lightMatrix.getLight(j+1,i+1).getCurrentColor().getHex());
+      rect(i*300,j*300,300,300);
       fill(0,0,0);
       text("IP= "+ lightMatrix.getLight(j+1,i+1).getIpAddr(), i*300+20, j*300+20);
+      text("Color= "+ lightMatrix.getLight(j+1,i+1).getCurrentColor().getName(), i*300+20, j*300+32);
     }
   }
-
 }
 
 void keyPressed() {
 
   if (key == 'f'){
         //sendudp(red.code);
-        fill(red.hex);
-        rect(0,0,300,300);
+        lightMatrix.getLight(1,2).setColor(red);
   }
 }
 
@@ -78,8 +81,7 @@ void keyReleased(){
   if (key != 'f'){
     if (flicker == 0){
       //sendudp(green);
-      fill(green.hex);
-      rect(0,0,300,300);
+      lightMatrix.getLight(1,3).setColor(green);
       held = 1;
     }
   }

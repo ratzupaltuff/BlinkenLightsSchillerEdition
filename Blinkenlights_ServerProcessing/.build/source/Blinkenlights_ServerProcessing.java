@@ -33,7 +33,22 @@ String[][] ipArray = {  {ip11,ip12,ip13},
                          {ip21,ip22,ip23},
                          {ip31,ip32,ip33}  };
 
+Light light11 = new Light(ip11);
+Light light12 = new Light(ip12);
+Light light13 = new Light(ip13);
+
+Light light21 = new Light(ip21);
+Light light22 = new Light(ip22);
+Light light23 = new Light(ip23);
+
+Light light31 = new Light(ip31);
+Light light32 = new Light(ip32);
+Light light33 = new Light(ip33);
+
+
 int port = 8881; // the destination port
+
+//Light l=new Light(ip11);
 
 long previousMillis = 0;
 int light = 0;
@@ -43,6 +58,7 @@ int held = 0;
 boolean transferedsuccessful = false;
 
 //layout on sender
+/*
 String brighter = "0xF700FF";        String lower = "0xF7807F";            String off = "0xF740BF";           String on = "0xF7C03F";
 
 String red = "0xF720DF";             String green = "0xF7A05F";            String blue = "0xF7609F";          String white = "0xF7E01F";
@@ -54,7 +70,31 @@ String orange = "0xF730CF";          String lightbluegreen = "0xF7B04F";   Strin
 String lightorange = "0xF708F7";     String darkerbluegreen = "0xF78877";  String lightviolet = "0xF748B7";   String fade = "0xF7C837";
 
 String yellow = "0xF728D7";          String darkbluegreen = "0xF7A857";    String pink = "0xF76897";          String smooth = "0xF7E817";
+*/
+//"red","orange","orangeyellowgreen","yellowgreen","yellow",
+    //                                              "green","greenblue","bluegreen","lightbluegreen","lightblue",
+    //                                              "blue","bluepurple","purpleblue","purple","lightpurple"
 
+
+Color red = new Color(0);
+Color orange = new Color(1);
+Color orangeyellowgreen = new Color(2);
+Color yellowgreen = new Color(3);
+Color yellow = new Color(4);
+
+Color green = new Color(5);
+Color greenblue = new Color(6);
+Color bluegreen = new Color(7);
+Color lightbluegreen = new Color(8);
+Color lightblue = new Color(9);
+
+Color blue = new Color(10);
+Color bluepurple = new Color(11);
+Color purpleblue = new Color(12);
+Color purple = new Color(13);
+Color lightpurple = new Color(14);
+
+Color white = new Color(15);
 
 
 
@@ -86,15 +126,15 @@ public void draw() {  // draw() loops forever, until stopped
 public void keyPressed() {
 
   if (key == 'f'){
-        //sendudp(red);
-        fill(255,0,0);
+        //sendudp(red.code);
+        fill(red.hex);
         rect(0,0,300,300);
   }
 }
 
 public void rainbow(){
   for (int i=1600000; i<170000000; i=i+10){
-    sendudp(green);
+    sendudp(green.code);
   }
 }
 
@@ -102,7 +142,7 @@ public void keyReleased(){
   if (key != 'f'){
     if (flicker == 0){
       //sendudp(green);
-      fill(0,255,0);
+      fill(green.hex);
       rect(0,0,300,300);
       held = 1;
     }
@@ -125,6 +165,115 @@ public void sendudp(String content){
           delay(1500);
         }
         transferedsuccessful = false;
+}
+class Color {
+    String[] colorNames = {"red","orange","orangeyellowgreen","yellowgreen","yellow",
+                                                    "green","greenblue","bluegreen","lightbluegreen","lightblue",
+                                                    "blue","bluepurple","purpleblue","purple","lightpurple" };
+    String[] colorCodes = {"0xF720DF","0xF710EF","0xF730CF","0xF708F7","0xF728D7",
+                                                  "0xF7A05F","0xF7906F","0xF7B04F","0xF78877","0xF7A857",
+                                                  "0xF7609F","0xF750AF","0xF7708F","0xF748B7","0xF76897"};
+
+    int[] colorHex = {0xffFF0000,0xffFF7B00,0xffFFBB00,0xffA5FF00,0xffFFF600,
+                                0xff00FF11,0xff00FFD8,0xff00EFFF,0xff87E5FF,0xff5AB3FC,
+                                0xff003FFF,0xff7B00FF,0xffAA00FF,0xffE100FF,0xffFF00E1};
+
+    String name;
+    String code;
+    int hex;
+
+
+    //layout on sender
+    /*String brighter = "0xF700FF";        String lower = "0xF7807F";            String off = "0xF740BF";           String on = "0xF7C03F";
+
+    String red = "0xF720DF";             String green = "0xF7A05F";            String blue = "0xF7609F";          String white = "0xF7E01F";
+
+    String lightred = "0xF710EF";        String lightgreen = "0xF7906F";       String lightblue = "0xF750AF";     String flash = "0xF7D02F";
+
+    String orange = "0xF730CF";          String lightbluegreen = "0xF7B04F";   String violet = "0xF7708F";        String strobe = "0xF7F00F";
+
+    String lightorange = "0xF708F7";     String darkerbluegreen = "0xF78877";  String lightviolet = "0xF748B7";   String fade = "0xF7C837";
+
+    String yellow = "0xF728D7";          String darkbluegreen = "0xF7A857";    String pink = "0xF76897";          String smooth = "0xF7E817";
+    */
+
+    Color(int colorID){
+          hex=0;
+          if(0<=colorID && colorID<15){
+            this.name=colorNames[colorID];
+            this.code=colorCodes[colorID];
+            this.hex=colorHex[colorID];
+          }
+          else if(colorID==15){  //white
+            this.name="white";
+            this.code="0xF7E01F";
+            this.hex=0xffFFFFFF;
+          }
+          else if(colorID==16){
+            this.name="flash";
+            this.code="0xF7D02F";
+          }
+          else if(colorID==17){
+            this.name="strobe";
+            this.code="0xF7F00F";
+          }
+          else if(colorID==18){
+            this.name="fade";
+            this.code="0xF7C837";
+          }
+          else if(colorID==19){
+            this.name="smooth";
+            this.code="0xF7E817";
+          }
+          else if(colorID==20){
+            this.name="brighter";
+            this.code="0xF700FF";
+          }
+          else if(colorID==21){
+            this.name="darker";
+            this.code="0xF7807F";
+          }
+          else if(colorID==22){
+            this.name="off";
+            this.code="0xF740BF";
+          }
+          else{
+            this.name="on";
+            this.code="0xF7C03F";
+          }
+    }
+
+    public String getName(){
+      return name;
+    }
+    public String getCode(){
+      return code;
+    }
+    public int getHex(){
+        return hex;
+    }
+}
+class Light{
+    private String ipAddr;
+    private Color currentColor;
+
+    Light(String ipAddr){
+        this.ipAddr=ipAddr;
+        currentColor=new Color(0);
+    }
+
+    public String getIpAddr(){
+        return ipAddr;
+    }
+
+    public Color getCurrentColor(){
+        return currentColor;
+    }
+
+    public void changeColor(Color c){
+        currentColor=c;
+    }
+
 }
   public void settings() {  size(1200,900); }
   static public void main(String[] passedArgs) {

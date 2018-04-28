@@ -15,7 +15,22 @@ String[][] ipArray = {  {ip11,ip12,ip13},
                          {ip21,ip22,ip23},
                          {ip31,ip32,ip33}  };
 
+Light light11 = new Light(ip11);
+Light light12 = new Light(ip12);
+Light light13 = new Light(ip13);
+
+Light light21 = new Light(ip21);
+Light light22 = new Light(ip22);
+Light light23 = new Light(ip23);
+
+Light light31 = new Light(ip31);
+Light light32 = new Light(ip32);
+Light light33 = new Light(ip33);
+
+
 int port = 8881; // the destination port
+
+//Light l=new Light(ip11);
 
 long previousMillis = 0;
 int light = 0;
@@ -25,6 +40,7 @@ int held = 0;
 boolean transferedsuccessful = false;
 
 //layout on sender
+/*
 String brighter = "0xF700FF";        String lower = "0xF7807F";            String off = "0xF740BF";           String on = "0xF7C03F";
 
 String red = "0xF720DF";             String green = "0xF7A05F";            String blue = "0xF7609F";          String white = "0xF7E01F";
@@ -36,7 +52,31 @@ String orange = "0xF730CF";          String lightbluegreen = "0xF7B04F";   Strin
 String lightorange = "0xF708F7";     String darkerbluegreen = "0xF78877";  String lightviolet = "0xF748B7";   String fade = "0xF7C837";
 
 String yellow = "0xF728D7";          String darkbluegreen = "0xF7A857";    String pink = "0xF76897";          String smooth = "0xF7E817";
+*/
+//"red","orange","orangeyellowgreen","yellowgreen","yellow",
+    //                                              "green","greenblue","bluegreen","lightbluegreen","lightblue",
+    //                                              "blue","bluepurple","purpleblue","purple","lightpurple"
 
+
+Color red = new Color(0);
+Color orange = new Color(1);
+Color orangeyellowgreen = new Color(2);
+Color yellowgreen = new Color(3);
+Color yellow = new Color(4);
+
+Color green = new Color(5);
+Color greenblue = new Color(6);
+Color bluegreen = new Color(7);
+Color lightbluegreen = new Color(8);
+Color lightblue = new Color(9);
+
+Color blue = new Color(10);
+Color bluepurple = new Color(11);
+Color purpleblue = new Color(12);
+Color purple = new Color(13);
+Color lightpurple = new Color(14);
+
+Color white = new Color(15);
 
 
 
@@ -68,15 +108,15 @@ void draw() {  // draw() loops forever, until stopped
 void keyPressed() {
 
   if (key == 'f'){
-        //sendudp(red);
-        fill(255,0,0);
+        //sendudp(red.code);
+        fill(red.hex);
         rect(0,0,300,300);
   }
 }
 
 void rainbow(){
   for (int i=1600000; i<170000000; i=i+10){
-    sendudp(green);
+    sendudp(green.code);
   }
 }
 
@@ -84,7 +124,7 @@ void keyReleased(){
   if (key != 'f'){
     if (flicker == 0){
       //sendudp(green);
-      fill(0,255,0);
+      fill(green.hex);
       rect(0,0,300,300);
       held = 1;
     }

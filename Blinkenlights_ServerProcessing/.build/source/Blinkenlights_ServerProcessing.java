@@ -14,7 +14,7 @@ import java.io.InputStream;
 import java.io.OutputStream; 
 import java.io.IOException; 
 
-public class src extends PApplet {
+public class Blinkenlights_ServerProcessing extends PApplet {
 
 
 // Processing UDP example to send and receive binary data
@@ -25,9 +25,13 @@ public class src extends PApplet {
 UDP udp; // define the UDP object
 
 //layout on wall
-String ip11 = "192.168.3.139";   String ip12 = "192.168.3.139";   String ip13 = "192.168.3.139";
-String ip21 = "192.168.3.139";   String ip22 = "192.168.3.139";   String ip23 = "192.168.3.139";
-String ip31 = "192.168.3.139";   String ip32 = "192.168.3.139";   String ip33 = "192.168.3.139";
+String ip11 = "192.168.3.139";   String ip12 = "192.168.3.140";   String ip13 = "192.168.3.141";
+String ip21 = "192.168.3.142";   String ip22 = "192.168.3.143";   String ip23 = "192.168.3.144";
+String ip31 = "192.168.3.145";   String ip32 = "192.168.3.146";   String ip33 = "192.168.3.147";
+
+String[][] ipArray = {  {ip11,ip12,ip13},
+                         {ip21,ip22,ip23},
+                         {ip31,ip32,ip33}  };
 
 int port = 8881; // the destination port
 
@@ -58,18 +62,33 @@ public void setup() {
   udp = new UDP( this, port); // create a new datagram connection on port 8888
   udp.log( true ); // <– printout the connection activity
   udp.listen( true ); // and wait for incoming message
-  sendudp(on);
+  //sendudp(on);
+  
   println("Setup finished");
-
 }
 
-public void draw(){
+public void draw() {  // draw() loops forever, until stopped
+  for(int i=300;i <=900; i=i+300){
+    line(i,0,i,900);
+  }
+  for(int i=300;i <=900; i=i+300){
+    line(0,i,900,i);
+  }
+  for(int i=0;i <3; i++){
+    for(int j=0;j <3; j++){
+      fill(0,0,0);
+      text("IP= "+ ipArray[j][i], i*300+20, j*300+20);
+    }
+  }
+
 }
 
 public void keyPressed() {
 
   if (key == 'f'){
-        sendudp(red);
+        //sendudp(red);
+        fill(255,0,0);
+        rect(0,0,300,300);
   }
 }
 
@@ -82,7 +101,9 @@ public void rainbow(){
 public void keyReleased(){
   if (key != 'f'){
     if (flicker == 0){
-      sendudp(green);
+      //sendudp(green);
+      fill(0,255,0);
+      rect(0,0,300,300);
       held = 1;
     }
   }
@@ -105,8 +126,9 @@ public void sendudp(String content){
         }
         transferedsuccessful = false;
 }
+  public void settings() {  size(1200,900); }
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "src" };
+    String[] appletArgs = new String[] { "Blinkenlights_ServerProcessing" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {

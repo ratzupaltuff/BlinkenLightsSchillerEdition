@@ -52,8 +52,8 @@ void setup() {
   orientation (LANDSCAPE);
 
   udp = new UDP( this, port); // create a new datagram connection on port 8888
-  udp.log( true ); // <– printout the connection activity
-  udp.listen( true ); // and wait for incoming message
+  //udp.log( true ); // <– printout the connection activity
+  //udp.listen( true ); // and wait for incoming message
 
   /*for(int i=0; i<3;i++){
     for(int j=0; j<3; j++){
@@ -85,11 +85,7 @@ void draw() {  // draw() loops forever, until stopped
       }
     }
 
-
     if(millis()-start>1000){
-
-
-
       for(int i=0;i <3; i++){
         for(int j=0;j <3; j++){
           lightMatrix.getLight(j+1,i+1).sendCurrentColor();
@@ -97,8 +93,6 @@ void draw() {  // draw() loops forever, until stopped
       }
       start = millis();
     }
-
-
 }
 
 // void receive( long[] data ) { // <– default handler

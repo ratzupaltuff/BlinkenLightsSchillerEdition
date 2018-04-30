@@ -9,7 +9,7 @@ const char* ssid = WiFi_SSID;
 const char* password = WiFi_PASSWD;
 
 // UDP variables
-unsigned int localPort = UDP_Port;
+//unsigned int localPort = UDP_Port;
 
 // connect to wifi – returns true if successful or false if not
 boolean connectWifi(){
@@ -56,6 +56,8 @@ boolean connectWifi(){
 // UDP shit following:
 
 // connect to UDP – returns true if successful or false if not
+// doesnt work in another failed
+/*
 boolean connectUDP(WiFiUDP UDP){
   boolean state = false;
 
@@ -76,3 +78,4 @@ boolean connectUDP(WiFiUDP UDP){
   }
   return state;
 }
+*/

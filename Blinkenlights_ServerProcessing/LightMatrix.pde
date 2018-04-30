@@ -32,9 +32,10 @@ class LightMatrix {
   }
 
   public Light getLight(int posX, int posY){
-      if(posX<=sizeX && posY<=sizeY){
+      if(posX<=sizeX && posY<=sizeY && posX>0 && posY>0){
           return lights[posX-1][posY-1];
       }
+      println("Fehler beim Aufruf der Methode getLight, Bedenke; das erste Licht ist 1;1 und nicht 0;0");
       return new Light("127.0.0.1");
   }
 

@@ -5,7 +5,7 @@
 #include "WiFiConnection.h"
 #include "config.h"
 
-IRsend irsend(IR_Led_Pin); //an IR led is connected to GPIO pin 0
+IRsend irsend(IR_Led_Pin); //an IR led is connected to GPIO pin D1 / 5
 
 boolean wifiConnected = false;
 
@@ -16,10 +16,28 @@ char packetBuffer[UDP_TX_PACKET_MAX_SIZE]; //buffer to hold incoming packet,
 
 boolean debugmode = Debugmode;  //if set to false, serial connection is disabled
 
+boolean connectUDP(){
+  boolean state = false;
+
+  #if(Debugmode)
+    Serial.println("");
+    Serial.println("Connecting to UDP");
+  #endif
+
+  if(UDP.begin(UDP_Port) == 1){
+    #if(Debugmode)
+      Serial.println("Connection successful");
+    #endif
+    state = true;
+  }else{
+    #if(Debugmode)
+      Serial.println("Connection failed");
+    #endif
+  }
+  return state;
+}
 
 void setup() {      //Setup loop
-  irsend.begin();
-
   // Initialise Serial connection
   #if(Debugmode)
     Serial.begin(115200);
@@ -30,13 +48,14 @@ void setup() {      //Setup loop
 
   // only proceed if wifi connection successful
   if(wifiConnected){
-    udpConnected = connectUDP(UDP);
+    udpConnected = connectUDP();
     if (udpConnected){
       // initialise pins
       pinMode(2, OUTPUT);
       digitalWrite(2, 0);
     }
   }
+  irsend.begin();
 }
 
 void loop() {    //main program
@@ -46,7 +65,9 @@ void loop() {    //main program
 
       // if there’s data available, read a packet
       int packetSize = UDP.parsePacket();
+      Serial.print("packet");
       if(packetSize){
+
 
         //print information about packet
         #if(Debugmode)
@@ -61,6 +82,7 @@ void loop() {    //main program
               Serial.print(".");
             }
           }
+
           Serial.print(", port ");
           Serial.println(UDP.remotePort());
         #endif

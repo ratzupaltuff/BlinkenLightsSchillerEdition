@@ -3,6 +3,6 @@
 
   boolean connectWifi();
 
-  boolean connectUDP(WiFiUDP UDP);
+  //boolean connectUDP(WiFiUDP UDP);
 
 #endif

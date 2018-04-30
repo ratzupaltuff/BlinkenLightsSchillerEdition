@@ -1,6 +1,6 @@
-#pragma once
+//#pragma once
 
-#define IR_Led_Pin 5
+#define IR_Led_Pin 5  //only pins D0 and D1 are stable and not buggy, we're using D1
 
 #define WiFi_SSID "Grube"
 #define WiFi_PASSWD "sicherheitgehtvor"

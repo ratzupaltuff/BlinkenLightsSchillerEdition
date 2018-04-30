@@ -71,8 +71,8 @@ public void setup() {
   orientation (LANDSCAPE);
 
   udp = new UDP( this, port); // create a new datagram connection on port 8888
-  udp.log( true ); // <– printout the connection activity
-  udp.listen( true ); // and wait for incoming message
+  //udp.log( true ); // <– printout the connection activity
+  //udp.listen( true ); // and wait for incoming message
 
   /*for(int i=0; i<3;i++){
     for(int j=0; j<3; j++){
@@ -104,11 +104,7 @@ public void draw() {  // draw() loops forever, until stopped
       }
     }
 
-
     if(millis()-start>1000){
-
-
-
       for(int i=0;i <3; i++){
         for(int j=0;j <3; j++){
           lightMatrix.getLight(j+1,i+1).sendCurrentColor();
@@ -116,8 +112,6 @@ public void draw() {  // draw() loops forever, until stopped
       }
       start = millis();
     }
-
-
 }
 
 // void receive( long[] data ) { // <– default handler
@@ -319,9 +313,10 @@ class LightMatrix {
   }
 
   public Light getLight(int posX, int posY){
-      if(posX<=sizeX && posY<=sizeY){
+      if(posX<=sizeX && posY<=sizeY && posX>0 && posY>0){
           return lights[posX-1][posY-1];
       }
+      println("Fehler beim Aufruf der Methode getLight, Bedenke; das erste Licht ist 1;1 und nicht 0;0");
       return new Light("127.0.0.1");
   }
 

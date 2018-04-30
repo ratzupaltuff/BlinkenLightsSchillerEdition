@@ -16,7 +16,7 @@ boolean udpConnected = false;
 char packetBuffer[UDP_TX_PACKET_MAX_SIZE]; //buffer to hold incoming packet,
 
 
-boolean debugmode = false;  //if set to false, serial connection is disabled
+boolean debugmode = true;  //if set to false, serial connection is disabled
 
 void setup() {
   irsend.begin();
@@ -38,6 +38,8 @@ void setup() {
       digitalWrite(2, 0);
     }
   }
+
+  irsend.sendNEC(0xF7E01F, 32);
 }
 
 void loop() {
@@ -87,14 +89,9 @@ void loop() {
           Serial.print("}\n");
         }
 
-        long endTime = millis();
-        int elapsedTime = endTime - startTime;
-        char elapsedChar[50];
-        itoa(elapsedTime, elapsedChar, 10);
         // send a reply, to the IP address and port that sent us the packet we received
         UDP.beginPacket(UDP.remoteIP(), UDP.remotePort());
         UDP.write(packetBuffer);
-        UDP.write(elapsedChar);
         UDP.endPacket();
       }
       delay(10);

@@ -3,8 +3,8 @@ import processing.data.*;
 import processing.event.*; 
 import processing.opengl.*; 
 
-import hypermedia.net.*; 
 import controlP5.*; 
+import hypermedia.net.*; 
 
 import java.util.HashMap; 
 import java.util.ArrayList; 
@@ -17,20 +17,21 @@ import java.io.IOException;
 
 public class Blinkenlights_ServerProcessing extends PApplet {
 
-
  // import controlP5 library
 
 
-UDP udp; // define the UDP object
 GUI gui;
 
 int port = 8881; // the destination port
+UDP udp; // define the UDP object
 
 long previousMillis = 0;
 int light = 0;
 long interval = 5000;
 int flicker = 0;
 int held = 0;
+
+int start = millis();
 
 boolean transferedsuccessful = false;
 
@@ -56,10 +57,9 @@ Color white = new Color(15);
 
 LightMatrix lightMatrix = new LightMatrix();
 
+
+
 public void setup() {
-  udp = new UDP( this, port); // create a new datagram connection on port 8888
-  udp.log( true ); // <– printout the connection activity
-  udp.listen( true ); // and wait for incoming message
   //sendudp(on);
   gui = new GUI(this);
   for(int col=1;col<=3;col++){
@@ -70,12 +70,16 @@ public void setup() {
   
   orientation (LANDSCAPE);
 
+  udp = new UDP( this, port); // create a new datagram connection on port 8888
+  udp.log( true ); // <– printout the connection activity
+  udp.listen( true ); // and wait for incoming message
 
   /*for(int i=0; i<3;i++){
     for(int j=0; j<3; j++){
       lightMatrix.getLight(j+1,i+1).setColor(white);
     }
   }*/
+
   println("Setup finished");
 }
 
@@ -97,8 +101,23 @@ public void draw() {  // draw() loops forever, until stopped
       text("IP= "+ lightMatrix.getLight(j+1,i+1).getIpAddr(), i*height/3+20, j*height/3+40);
       textSize(height/40);
       text("Color= "+ lightMatrix.getLight(j+1,i+1).getCurrentColor().getName(), i*height/3+20, j*height/3+80);
+      }
     }
-  }
+
+
+    if(millis()-start>1000){
+
+
+
+      for(int i=0;i <3; i++){
+        for(int j=0;j <3; j++){
+          lightMatrix.getLight(j+1,i+1).sendCurrentColor();
+        }
+      }
+      start = millis();
+    }
+
+
 }
 
 // void receive( long[] data ) { // <– default handler
@@ -257,14 +276,23 @@ class Light{
         currentColor=c;
     }
 
+    public int getPort(){
+      return port;
+    }
+
+    public void sendCurrentColor(){
+      udp.send(currentColor.getCode(),ipAddr,port);
+    }
+
 }
 class LightMatrix {
   private int sizeX;
   private int sizeY;
 
+
   //layout on wall
-  String ip11 = "192.168.3.139";   String ip12 = "192.168.3.140";   String ip13 = "192.168.3.141";
-  String ip21 = "192.168.3.142";   String ip22 = "192.168.3.143";   String ip23 = "192.168.3.144";
+  String ip11 = "192.168.9.220";   String ip12 = "192.168.12.204";   String ip13 = "192.168.7.96";
+  String ip21 = "192.168.5.218";   String ip22 = "192.168.3.143";   String ip23 = "192.168.3.144";
   String ip31 = "192.168.3.145";   String ip32 = "192.168.3.146";   String ip33 = "192.168.3.147";
 
   /*String[][] ipArray = {  {ip11,ip12,ip13},

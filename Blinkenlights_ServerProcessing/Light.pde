@@ -19,4 +19,12 @@ class Light{
         currentColor=c;
     }
 
+    public int getPort(){
+      return port;
+    }
+
+    public void sendCurrentColor(){
+      udp.send(currentColor.getCode(),ipAddr,port);
+    }
+
 }

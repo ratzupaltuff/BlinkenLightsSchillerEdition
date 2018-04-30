@@ -1,17 +1,18 @@
-import hypermedia.net.*;
 import controlP5.*; // import controlP5 library
+import hypermedia.net.*;
 
-
-UDP udp; // define the UDP object
 GUI gui;
 
 int port = 8881; // the destination port
+UDP udp; // define the UDP object
 
 long previousMillis = 0;
 int light = 0;
 long interval = 5000;
 int flicker = 0;
 int held = 0;
+
+int start = millis();
 
 boolean transferedsuccessful = false;
 
@@ -37,10 +38,9 @@ Color white = new Color(15);
 
 LightMatrix lightMatrix = new LightMatrix();
 
+
+
 void setup() {
-  udp = new UDP( this, port); // create a new datagram connection on port 8888
-  udp.log( true ); // <– printout the connection activity
-  udp.listen( true ); // and wait for incoming message
   //sendudp(on);
   gui = new GUI(this);
   for(int col=1;col<=3;col++){
@@ -51,12 +51,16 @@ void setup() {
   size(displayWidth, displayHeight);
   orientation (LANDSCAPE);
 
+  udp = new UDP( this, port); // create a new datagram connection on port 8888
+  udp.log( true ); // <– printout the connection activity
+  udp.listen( true ); // and wait for incoming message
 
   /*for(int i=0; i<3;i++){
     for(int j=0; j<3; j++){
       lightMatrix.getLight(j+1,i+1).setColor(white);
     }
   }*/
+
   println("Setup finished");
 }
 
@@ -78,8 +82,23 @@ void draw() {  // draw() loops forever, until stopped
       text("IP= "+ lightMatrix.getLight(j+1,i+1).getIpAddr(), i*height/3+20, j*height/3+40);
       textSize(height/40);
       text("Color= "+ lightMatrix.getLight(j+1,i+1).getCurrentColor().getName(), i*height/3+20, j*height/3+80);
+      }
     }
-  }
+
+
+    if(millis()-start>1000){
+
+
+
+      for(int i=0;i <3; i++){
+        for(int j=0;j <3; j++){
+          lightMatrix.getLight(j+1,i+1).sendCurrentColor();
+        }
+      }
+      start = millis();
+    }
+
+
 }
 
 // void receive( long[] data ) { // <– default handler

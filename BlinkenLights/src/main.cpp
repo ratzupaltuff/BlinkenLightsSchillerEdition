@@ -65,7 +65,7 @@ void loop() {    //main program
 
       // if there’s data available, read a packet
       int packetSize = UDP.parsePacket();
-      Serial.print("packet");
+      
       if(packetSize){
 
 

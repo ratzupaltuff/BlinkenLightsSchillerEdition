@@ -4,9 +4,9 @@ class LightMatrix {
 
 
   //layout on wall
-  String ip11 = "192.168.9.220";   String ip12 = "192.168.12.204";   String ip13 = "192.168.7.96";
-  String ip21 = "192.168.5.218";   String ip22 = "192.168.3.143";   String ip23 = "192.168.3.144";
-  String ip31 = "192.168.3.145";   String ip32 = "192.168.3.146";   String ip33 = "192.168.3.147";
+  String ip11 = "192.168.12.234";   String ip12 = "192.168.9.220";   String ip13 = "192.168.12.231";
+  String ip21 = "192.168.8.243";   String ip22 = "192.168.12.232";   String ip23 = "192.168.12.204";
+  String ip31 = "192.168.7.96";   String ip32 = "192.168.2.250";   String ip33 = "192.168.4.246";
 
   /*String[][] ipArray = {  {ip11,ip12,ip13},
                                  {ip21,ip22,ip23},

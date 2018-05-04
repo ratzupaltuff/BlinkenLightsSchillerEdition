@@ -7,4 +7,4 @@
 
 #define UDP_Port 8881
 
-#define Debugmode 1
+#define Debugmode 0

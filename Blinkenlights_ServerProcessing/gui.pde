@@ -4,6 +4,7 @@ class GUI {
     GUI(PApplet thePApplet) {
 			cp5 = new ControlP5(thePApplet);
       cp5.addButton("Play TicTacToe").setPosition(height+10,10).setSize(width-height-20,80);
+			cp5.addButton("playAnimation").setPosition(height+10,110).setSize(width-height-20,80).setLabel("Play Animation");
       //cp5.addButton("selectColor").setPosition(height+10,100).setSize(width-height-20,80).setLabel("Toggle Colorselection");
 		}
     void generateColorSelector(int x, int y, int w, int h, int col, int row){

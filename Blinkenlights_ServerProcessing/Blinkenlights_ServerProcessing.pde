@@ -93,6 +93,8 @@ void draw() {  // draw() loops forever, until stopped
       }
       start = millis();
     }
+
+
 }
 
 // void receive( long[] data ) { // <– default handler
@@ -129,9 +131,10 @@ void controlEvent(ControlEvent theEvent) {
   }
 }
 
-public void selectColors(int theValue) {
-  lightMatrix.getLight(1,1).setColor(red);
-}
+public void playAnimation(int theValue) {
+  Animation a1=new Animation("Farbdurchlauf");
+  a1.animation();
+  }
 
 
 

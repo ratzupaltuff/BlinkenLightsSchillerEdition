@@ -8,6 +8,16 @@ public Animation(String name){
   this.name=name;
 }
 
+public void allOff(){
+   for(int col=3; col>=1;col--){
+      for(int row=3; row>=1;row--){
+        lightMatrix.getLight(col,row).setColor(new Color(99));
+        lightMatrix.getLight(col,row).sendCurrentColor();
+          delay(120);
+      }
+   }
+}
+
 public void animation(){
 
  for(int j = 0; j<10; j++){

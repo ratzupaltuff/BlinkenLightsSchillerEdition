@@ -36,6 +36,7 @@ Color lightpurple = new Color(14);
 
 Color white = new Color(15);
 Color off = new Color(22);
+Color on = new Color(99);
 
 LightMatrix lightMatrix = new LightMatrix();
 
@@ -130,6 +131,12 @@ void controlEvent(ControlEvent theEvent) {
       }
     }
   }
+}
+
+
+public void allOff(){
+  Animation off = new Animation("All Off");
+  off.allOff();
 }
 
 public void playAnimation(int theValue) {

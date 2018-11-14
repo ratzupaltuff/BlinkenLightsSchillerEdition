@@ -8,6 +8,11 @@ class GUI {
       cp5.addButton("allOn").setPosition(height+10,110).setSize(width-height-20,80).setLabel("All on");
       //cp5.addButton("Play TicTacToe").setPosition(height+10,110).setSize(width-height-20,80);
       cp5.addButton("playAnimation").setPosition(height+10,210).setSize(width-height-20,80).setLabel("Play Animation");
+      cp5.addButton("alexandra").setPosition(height+10,310).setSize(width-height-20,80).setLabel("Alexandra");
+      cp5.addButton("celina").setPosition(height+10,410).setSize(width-height-20,80).setLabel("Celina");
+      cp5.addButton("denis").setPosition(height+10,510).setSize(width-height-20,80).setLabel("Denis");
+      
+      
       
       //cp5.addButton("selectColor").setPosition(height+10,100).setSize(width-height-20,80).setLabel("Toggle Colorselection");
 		}

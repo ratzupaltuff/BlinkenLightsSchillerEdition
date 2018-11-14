@@ -139,10 +139,21 @@ public void allOff(){
   off.allOff();
 }
 
+public void allOn(){
+  Animation off = new Animation("All On");
+  off.allOn();
+}
+
 public void playAnimation(int theValue) {
   Animation a1=new Animation("Farbdurchlauf");
   a1.animation();
   }
+  
+  public void alexandra(){
+    Alexandra alexandra = new Alexandra("Alexandras Animationen");
+    alexandra.alexandrasAnimation();
+  }
+    
 
 
 

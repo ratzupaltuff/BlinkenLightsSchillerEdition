@@ -16,7 +16,7 @@ class Color {
 
 
     //layout on sender
-    /*String brighter = "0xF700FF";        String lower = "0xF7807F";            String off = "0xF740BF";           String on = "0xF7C03F";
+    /*String brighter = "0xF700FF";        String lower = "0xF7807F";          String off = "0xF740BF";           String on = "0xF7C03F";
 
     String red = "0xF720DF";             String green = "0xF7A05F";            String blue = "0xF7609F";          String white = "0xF7E01F";
 

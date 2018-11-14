@@ -35,6 +35,7 @@ Color purple = new Color(13);
 Color lightpurple = new Color(14);
 
 Color white = new Color(15);
+Color off = new Color(22);
 
 LightMatrix lightMatrix = new LightMatrix();
 
@@ -73,8 +74,8 @@ int quarter = width/4;
 void draw() {  // draw() loops forever, until stopped
   background(#FFFFFF);
 
-  for(int i=0;i <3; i++){
-    for(int j=0;j <3; j++){
+  for(int i=0;i < 3; i++){
+    for(int j=0;j < 3; j++){
       fill(lightMatrix.getLight(j+1,i+1).getCurrentColor().getHex());
       rect(i*height/3,j*height/3,height/3,height/3);
       fill(0,0,0);

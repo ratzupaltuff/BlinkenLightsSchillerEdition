@@ -5,8 +5,8 @@
 IRsend irsend(5); //an IR led is connected to GPIO pin 0
 
 // wifi connection variables
-const char* ssid = "Grube";
-const char* password = "sicherheitgehtvor";
+const char* ssid = "Blinkenlights";
+const char* password = "blinkenl";
 boolean wifiConnected = false;
 
 // UDP variables

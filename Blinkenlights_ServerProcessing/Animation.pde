@@ -1,4 +1,4 @@
-public class Animation{
+public class Animations {
 
 String name;
 //int col=3;

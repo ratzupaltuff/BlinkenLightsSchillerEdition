@@ -153,6 +153,22 @@ public void playAnimation(int theValue) {
     Alexandra alexandra = new Alexandra("Alexandras Animationen");
     alexandra.alexandrasAnimation();
   }
+  
+   public void celina(){
+    Celina celina = new Celina("Celinas Animationen");
+    celina.celinasAnimation();
+  }
+  
+   public void denis(){
+    Denis denis = new Denis("Denis' Animationen");
+    denis.denisAnimation();
+  }
+  
+  public void marek(){
+    Marek marek = new Marek("Mareks Animationen");
+    marek.mareksAnimation();
+  }
+ 
     
 
 

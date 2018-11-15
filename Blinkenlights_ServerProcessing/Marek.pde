@@ -87,8 +87,8 @@ public void animation0(){
   
   }
   
-  //alles aus
-  initializeOneColor(22);
+  //alles weiß
+  initializeOneColor(15);
   } 
   
   public void setMatrix(){

@@ -11,9 +11,9 @@ public Alexandra(String name){
 
 public void alexandrasAnimation(){
  // animation0();
- // animation1();
+  animation1();
  // animation2();
-  animation3();
+ // animation3();
 }
 
 public void animation0(){

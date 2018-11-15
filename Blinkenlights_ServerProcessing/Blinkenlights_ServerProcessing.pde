@@ -140,8 +140,9 @@ public void allOff(){
 }
 
 public void allOn(){
-  Animation off = new Animation("All On");
-  off.allOn();
+  Animation on = new Animation("All On");
+  on.allOn();
+  
 }
 
 public void playAnimation(int theValue) {

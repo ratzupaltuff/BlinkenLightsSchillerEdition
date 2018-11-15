@@ -28,23 +28,15 @@ public void setMatrix(){
 }
 
 public void allOff(){
-   for(int col=3; col>=1;col--){
-      for(int row=3; row>=1;row--){
-        lightMatrix.getLight(col,row).setColor(new Color(22));
-        lightMatrix.getLight(col,row).sendCurrentColor();
-          delay(200);
-      }
-   }
+   initializeOneColor(22);
+   setMatrix();
+   
 }
 
 public void allOn(){
-   for(int col=3; col>=1;col--){
-      for(int row=3; row>=1;row--){
-        lightMatrix.getLight(col,row).setColor(new Color(99));
-        lightMatrix.getLight(col,row).sendCurrentColor();
-          delay(200);
-      }
-   }
+   initializeOneColor(99);
+   initializeOneColor(15);
+   setMatrix();
 }
 
 public void animation(){

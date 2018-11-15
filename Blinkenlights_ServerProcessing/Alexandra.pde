@@ -11,9 +11,13 @@ public Alexandra(String name){
 
 public void alexandrasAnimation(){
  // animation0();
+ // delay(5000);
   animation1();
- // animation2();
+  delay(5000);
+//  animation2();
+  delay(5000);
  // animation3();
+ setAllWhite();
 }
 
 public void animation0(){
@@ -22,10 +26,11 @@ public void animation0(){
         for(int row=3; row>=1;row--){
         lightMatrix.getLight(col, row).setColor(new Color (i));
         lightMatrix.getLight(col,row).sendCurrentColor();
-        delay (10000);
+        delay (200);
 
       }
   }
+  setAllWhite();
 }
   
 public void animation1(){
@@ -33,12 +38,14 @@ public void animation1(){
     for (int i=0; i<16;i=i+5){
       for (int col= 3; col>=1; col--){
         for(int row=3; row>=1;row--){
-        lightMatrix.getLight(col, row).setColor(new Color (i));
+        lightMatrix.getLight(col,row).setColor(new Color (i));
         lightMatrix.getLight(col,row).sendCurrentColor();
         delay(200);
+        }
+      }
     }
   }
-    }}
+  setAllWhite();
 }
 public void animation2(){
   for (int col = 3; col>=1; col--){
@@ -50,6 +57,7 @@ public void animation2(){
       }
     }
   }
+  setAllWhite();
 }
 public void animation3(){
   int k = 15;
@@ -67,5 +75,6 @@ public void animation3(){
       }
     }
   }
+
 }
 }

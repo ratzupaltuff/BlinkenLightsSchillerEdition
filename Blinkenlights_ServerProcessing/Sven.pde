@@ -11,6 +11,8 @@ public Sven(String name){
 public void svensAnimation(){
  // animation0();
   animation();
+  setAllWhite();
+  
  // animation2();
  // animation3();
 }

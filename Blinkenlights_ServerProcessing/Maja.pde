@@ -13,6 +13,7 @@ public void majasAnimation(){
   animation();
  // animation2();
  // animation3();
+ setAllWhite();
 }
 
 public void animation(){

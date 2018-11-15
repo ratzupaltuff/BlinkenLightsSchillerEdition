@@ -9,10 +9,21 @@ String name;
 }
 
 public void mareksAnimation(){
- // animation0();
+ 
+  strobe();
+  setAllWhite();
+  // animation0();
 //  animation1();
  // animation2();
 
+}
+
+
+public void strobe(){
+  initializeOneColor(16);
+  setMatrix();
+  delay(20000);
+  
 }
 
 public void animation0(){
@@ -27,7 +38,7 @@ public void animation0(){
   }
 }
   
-  
+
   
   public void animation1(){
  
@@ -89,8 +100,7 @@ public void animation0(){
   
   }
   
-  //alles weiß
-  initializeOneColor(15);
+ 
   } 
   
   

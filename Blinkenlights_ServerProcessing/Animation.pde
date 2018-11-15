@@ -39,6 +39,11 @@ public void allOn(){
    setMatrix();
 }
 
+public void setAllWhite(){
+  initializeOneColor(15);
+  setMatrix();
+}
+
 public void animation(){
 allOn();
 

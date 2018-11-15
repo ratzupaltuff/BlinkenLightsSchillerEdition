@@ -11,8 +11,7 @@ public Raoul(String name){
 public void raoulsAnimation(){
  // animation0();
   animation();
- // animation2();
- // animation3();
+  setAllWhite();
 }
 
 public void animation(){
@@ -25,6 +24,7 @@ public void animation(){
 
       }
   }
+  
 }
   
 

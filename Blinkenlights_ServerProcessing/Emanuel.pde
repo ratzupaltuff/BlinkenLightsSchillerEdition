@@ -13,6 +13,7 @@ public class Emanuel extends Animation {
     animation();
     // animation2();
     // animation3();
+    setAllWhite();
   }
 
   public void animation() {
@@ -22,8 +23,7 @@ public class Emanuel extends Animation {
     for (int i =0; i<=19; i++){
       initializeOneColor(i);
       delay(5000);
-    
-    initializeOneColor(15);
+   
     }
    
   }

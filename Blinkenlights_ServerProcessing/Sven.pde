@@ -8,7 +8,7 @@ public Sven(String name){
   super(name);
 }
 
-public void SvensAnimation(){
+public void svensAnimation(){
  // animation0();
   animation();
  // animation2();

@@ -8,7 +8,7 @@ public class Emanuel extends Animation {
     super(name);
   }
 
-  public void EmanuelsAnimation() {
+  public void emanuelsAnimation() {
     // animation0();
     animation();
     // animation2();

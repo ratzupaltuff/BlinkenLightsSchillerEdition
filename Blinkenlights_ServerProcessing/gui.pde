@@ -12,6 +12,11 @@ class GUI {
       cp5.addButton("celina").setPosition(height+10,410).setSize(width-height-20,80).setLabel("Celina");
       cp5.addButton("denis").setPosition(height+10,510).setSize(width-height-20,80).setLabel("Denis");
       cp5.addButton("marek").setPosition(height+10,610).setSize(width-height-20,80).setLabel("Marek");
+      cp5.addButton("emanuel").setPosition(height+10,710).setSize(width-height-20,80).setLabel("Emanuel");
+      cp5.addButton("jannik").setPosition(height+10,810).setSize(width-height-20,80).setLabel("Jannik");
+      cp5.addButton("maja").setPosition(height+10,910).setSize(width-height-20,80).setLabel("Maja");
+      cp5.addButton("raoul").setPosition(height+10,1010).setSize(width-height-20,80).setLabel("Raoul");
+      cp5.addButton("sven").setPosition(height+10,1110).setSize(width-height-20,80).setLabel("Sven");
       
       
       

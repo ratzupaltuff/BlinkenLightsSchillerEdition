@@ -168,8 +168,32 @@ public void playAnimation(int theValue) {
     Marek marek = new Marek("Mareks Animationen");
     marek.mareksAnimation();
   }
+  
+  public void emanuel(){
+    Emanuel emanuel = new Emanuel("Emanuels Animationen");
+    emanuel.emanuelsAnimation();
+  }
  
-    
+public void jannik(){
+    Jannik jannik = new Jannik("Janniks Animationen");
+    jannik.janniksAnimation();
+} 
+  public void maja(){
+    Maja maja = new Maja("Majas Animationen");
+    maja.majasAnimation();
+  }
+
+public void raoul(){
+    Raoul raoul = new Raoul("Raouls Animationen");
+    raoul.raoulsAnimation();
+  }
+
+public void sven(){
+    Sven sven = new Sven("Svens' Animationen");
+    sven.svensAnimation();
+  } 
+  
+  
 
 
 

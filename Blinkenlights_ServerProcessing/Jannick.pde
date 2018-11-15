@@ -8,7 +8,7 @@ public Jannik(String name){
   super(name);
 }
 
-public void JanniksAnimation(){
+public void janniksAnimation(){
  // animation0();
   animation();
  // animation2();

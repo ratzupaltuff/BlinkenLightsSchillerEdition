@@ -8,7 +8,7 @@ public Maja(String name){
   super(name);
 }
 
-public void MajasAnimation(){
+public void majasAnimation(){
  // animation0();
   animation();
  // animation2();

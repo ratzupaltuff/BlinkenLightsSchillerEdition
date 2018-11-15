@@ -30,7 +30,7 @@ public void animation0(){
 
       }
   }
-  setAllWhite();
+  
 }
   
 public void animation1(){
@@ -45,7 +45,7 @@ public void animation1(){
       }
     }
   }
-  setAllWhite();
+  
 }
 public void animation2(){
   for (int col = 3; col>=1; col--){
@@ -57,7 +57,7 @@ public void animation2(){
       }
     }
   }
-  setAllWhite();
+ 
 }
 public void animation3(){
   int k = 15;

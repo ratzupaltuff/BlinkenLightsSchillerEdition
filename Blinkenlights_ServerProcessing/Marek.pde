@@ -1,6 +1,8 @@
 public class Marek extends Animation{
 
 String name;
+
+int shortDelay=120;
 //int col=3;
 //int row=3;
 
@@ -10,6 +12,7 @@ String name;
 
 public void mareksAnimation(){
  
+  colorCols();
   strobe();
   setAllWhite();
   // animation0();
@@ -32,7 +35,7 @@ public void animation0(){
         for(int row=3; row>=1;row--){
         lightMatrix.getLight(col, row).setColor(new Color (i));
         lightMatrix.getLight(col,row).sendCurrentColor();
-        delay (10000);
+        delay (200);
 
       }
   }
@@ -40,77 +43,62 @@ public void animation0(){
   
 
   
-  public void animation1(){
+  public void colorCols(){
  
-  //einschalten
-    initializeOneColor(99);
+  for (int i = 1200; i>=120; i=i-100){
     
-    //Orange setzen
-    initializeOneColor(1);
   
-  for(int k=0; k<=10;k++){
+  leftColOneColor(1);
+  delay(i);
+  midColOneColor(8);
+  delay(i)
+  rightColOneColor(4);
+  delay(i)
   
-   //ausschalten
-    initializeOneColor(22);
-    
-  // Linke Spalte einschalten
+  
+  
+  } 
+
+public void leftColOneColor(int id){
+  allOff();
+  leftColOn();
+  initializeOneColor(id);
+}
+
+public void midColOneColor(int id){
+  allOff();
+  midColOn();
+  initializeOneColor(id); 
+}
+
+public void rightColOneColor(int id){
+  allOff();
+  rightColOn();
+  initializeOneColor(id);
+}
+
+
+public void leftColOn(){
   for (int i = 1; i<=3; i++){
     lightMatrix.getLight(i,1).setColor(new Color (99));
+    setMatrix();
+    delay(shortDelay);
   }
-  
-  
-  // Absenden
-   setMatrix();
-   delay(200);
-   
-   // Mittlere Spaltee einschalten
+}
+
+public void midColOn(){
    for (int i = 1; i<=3; i++){
     lightMatrix.getLight(i,2).setColor(new Color (99));
+    setMatrix();
+    delay(shortDelay);
   }
-  
-// Rest schwarz setzen
-  for (int i = 1; i<=3; i++){
-    lightMatrix.getLight(i,1).setColor(new Color (22));
-   }
-   for (int i = 1; i<=3; i++){
-    lightMatrix.getLight(i,3).setColor(new Color (22));
-   }
-     
-  // Absenden
-  setMatrix();
-  delay(200);
- 
-  
-    // Rechte Spalte einschalten
-   for (int i = 1; i<=3; i++){
-    lightMatrix.getLight(i,3).setColor(new Color (99));
-  }
-  
-// Rest schwarz setzen
- for (int i = 1; i<=3; i++){
-    for (int j = 1; j<=2; j++){ 
-    lightMatrix.getLight(i,j).setColor(new Color (22));
-   }
-  }
-     
-  // Absenden
-  setMatrix();
-  delay(200); 
-  
-  
-  }
-  
- 
-  } 
-  
-  
-  
-  
-  /* Einzelne Lampen setzen
-  lightMatrix.getLight(1,1).setColor(new Color (1));
-  lightMatrix.getLight(1,1).sendCurrentColor();
-  delay (1000);
-  */
-
-
 }
+
+public void rightColOn(){
+  for (int i = 1; i<=3; i++){
+    lightMatrix.getLight(i,3).setColor(new Color (99));
+    setMatrix();
+    delay(shortDelay);
+  }
+ }
+} 

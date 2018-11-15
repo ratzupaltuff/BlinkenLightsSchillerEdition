@@ -12,8 +12,8 @@ int shortDelay=120;
 
 public void mareksAnimation(){
  
-  colorCols();
-  strobe();
+  colorColsandRows();
+ // strobe();
   setAllWhite();
   // animation0();
 //  animation1();
@@ -43,7 +43,7 @@ public void animation0(){
   
 
   
-  public void colorCols(){
+  public void colorColsandRows(){
  
   for (int i = 1200; i>=120; i=i-100){
     
@@ -51,15 +51,67 @@ public void animation0(){
   leftColOneColor(1);
   delay(i);
   midColOneColor(8);
-  delay(i)
+  delay(i);
   rightColOneColor(4);
-  delay(i)
+  delay(i); 
+  } 
   
-  
+for (int i = 1200; i>=120; i=i-100){
+  leftColOneColor(1);
+  delay(i);
+  midColOneColor(8);
+  delay(i);
+  rightColOneColor(4);
+  delay(i); 
   
   } 
+  
+  
+ }
 
-public void leftColOneColor(int id){
+public void topRowOneColor(int id){
+  allOff();
+  topRowOn();
+  initializeOneColor(id);
+}
+
+public void midRowOneColor(int id){
+  allOff();
+  midRowOn();
+  initializeOneColor(id); 
+}
+
+public void bottomRowOneColor(int id){
+  allOff();
+  bottomRowOn();
+  initializeOneColor(id);
+}
+
+
+public void topRowOn(){
+  for (int i = 1; i<=3; i++){
+    lightMatrix.getLight(1,i).setColor(new Color (99));
+    setMatrix();
+    delay(shortDelay);
+  }
+}
+
+public void midRowOn(){
+   for (int i = 1; i<=3; i++){
+    lightMatrix.getLight(2,i).setColor(new Color (99));
+    setMatrix();
+    delay(shortDelay);
+  }
+}
+
+public void bottomRowOn(){
+  for (int i = 1; i<=3; i++){
+    lightMatrix.getLight(3,i).setColor(new Color (99));
+    setMatrix();
+    delay(shortDelay);
+  }
+ }
+ public void leftColOneColor(int id){
   allOff();
   leftColOn();
   initializeOneColor(id);

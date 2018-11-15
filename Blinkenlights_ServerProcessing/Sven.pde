@@ -1,14 +1,14 @@
-public class Denis extends Animation{
+public class Sven extends Animation{
 
 String name;
 //int col=3;
 //int row=3;
 
-public Denis(String name){
+public Sven(String name){
   super(name);
 }
 
-public void denisAnimation(){
+public void SvensAnimation(){
  // animation0();
   animation();
  // animation2();

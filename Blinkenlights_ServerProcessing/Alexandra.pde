@@ -1,11 +1,11 @@
-public class Alexandra{
+public class Alexandra extends Animation{
 
 String name;
 //int col=3;
 //int row=3;
 
 public Alexandra(String name){
-  this.name=name;
+  super(name);
 }
 
 

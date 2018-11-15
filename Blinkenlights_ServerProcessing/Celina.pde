@@ -1,11 +1,11 @@
-public class Celina{
+public class Celina extends Animation{
 
 String name;
 //int col=3;
 //int row=3;
 
 public Celina(String name){
-  this.name=name;
+  super(name);
 }
 
 public void celinasAnimation(){

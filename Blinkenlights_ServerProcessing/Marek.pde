@@ -1,18 +1,18 @@
-public class Marek{
+public class Marek extends Animation{
 
 String name;
 //int col=3;
 //int row=3;
 
-public Marek(String name){
-  this.name=name;
+ public Marek(String name){
+ super(name);
 }
 
 public void mareksAnimation(){
  // animation0();
-  animation1();
+//  animation1();
  // animation2();
- // animation3();
+ animation3();
 }
 
 public void animation0(){
@@ -27,6 +27,17 @@ public void animation0(){
   }
 }
   
+  
+  public void animation3(){
+    initializeOneColor(99);
+    delay(500);
+    for (int i =0; i<=19; i++){
+      initializeOneColor(i);
+      delay(5000);
+    
+    initializeOneColor(15);
+    }
+  }
   public void animation1(){
  
   //einschalten
@@ -91,25 +102,7 @@ public void animation0(){
   initializeOneColor(15);
   } 
   
-  public void setMatrix(){
-  // Information an Matrix senden
-  for (int i = 1; i<=3; i++){
-    for (int j = 1; j<=3; j++){ 
-      lightMatrix.getLight(i,j).sendCurrentColor(); 
-    }
-  }
   
-  } 
-  
-  public void initializeOneColor(int id){
-   for (int i = 1; i<=3; i++){
-    for (int j = 1; j<=3; j++){ 
-    lightMatrix.getLight(i,j).setColor(new Color (id));
-   }
-  }
-  setMatrix();
-  delay(120);
- }
   
   
   /* Einzelne Lampen setzen

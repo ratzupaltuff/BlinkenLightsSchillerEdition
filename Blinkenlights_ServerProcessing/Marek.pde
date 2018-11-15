@@ -12,7 +12,7 @@ public void mareksAnimation(){
  // animation0();
 //  animation1();
  // animation2();
- animation3();
+
 }
 
 public void animation0(){
@@ -28,16 +28,7 @@ public void animation0(){
 }
   
   
-  public void animation3(){
-    initializeOneColor(99);
-    delay(500);
-    for (int i =0; i<=19; i++){
-      initializeOneColor(i);
-      delay(5000);
-    
-    initializeOneColor(15);
-    }
-  }
+  
   public void animation1(){
  
   //einschalten

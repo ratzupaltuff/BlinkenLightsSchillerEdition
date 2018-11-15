@@ -16,13 +16,15 @@ public class Emanuel extends Animation {
   }
 
   public void animation() {
-    int i=15;
-    for (int col= 3; col>=1; col--) {
-      for (int row=3; row>=1; row--) {
-        lightMatrix.getLight(col, row).setColor(new Color (i));
-        lightMatrix.getLight(col, row).sendCurrentColor();
-        delay (10000);
-      }
+    
+    initializeOneColor(99);
+    delay(500);
+    for (int i =0; i<=19; i++){
+      initializeOneColor(i);
+      delay(5000);
+    
+    initializeOneColor(15);
     }
+   
   }
 }

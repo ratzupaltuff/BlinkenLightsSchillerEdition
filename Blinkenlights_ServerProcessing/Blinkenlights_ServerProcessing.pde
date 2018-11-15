@@ -81,7 +81,7 @@ void draw() {  // draw() loops forever, until stopped
       rect(i*height/3,j*height/3,height/3,height/3);
       fill(0,0,0);
       textSize(height/30);
-      text("IP= "+ lightMatrix.getLight(j+1,i+1).getIpAddr(), i*height/3+20, j*height/3+40);
+      text("IP="+ lightMatrix.getLight(j+1,i+1).getIpAddr(), i*height/3+20, j*height/3+40);
       textSize(height/40);
       text("Color= "+ lightMatrix.getLight(j+1,i+1).getCurrentColor().getName(), i*height/3+20, j*height/3+80);
       }
@@ -177,7 +177,8 @@ public void playAnimation(int theValue) {
 public void jannik(){
     Jannik jannik = new Jannik("Janniks Animationen");
     jannik.janniksAnimation();
-} 
+}
+
   public void maja(){
     Maja maja = new Maja("Majas Animationen");
     maja.majasAnimation();

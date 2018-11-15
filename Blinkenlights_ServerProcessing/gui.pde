@@ -4,19 +4,19 @@ class GUI {
     GUI(PApplet thePApplet) {
 			cp5 = new ControlP5(thePApplet);
      
-      cp5.addButton("allOff").setPosition(height+10,10).setSize(width-height-20,80).setLabel("All off");
-      cp5.addButton("allOn").setPosition(height+10,110).setSize(width-height-20,80).setLabel("All on");
+      cp5.addButton("allOff").setPosition(height+10,10).setSize(width-height-20,40).setLabel("All off");
+      cp5.addButton("allOn").setPosition(height+10,60).setSize(width-height-20,40).setLabel("All on");
       //cp5.addButton("Play TicTacToe").setPosition(height+10,110).setSize(width-height-20,80);
-      cp5.addButton("playAnimation").setPosition(height+10,210).setSize(width-height-20,80).setLabel("Play Animation");
-      cp5.addButton("alexandra").setPosition(height+10,310).setSize(width-height-20,80).setLabel("Alexandra");
-      cp5.addButton("celina").setPosition(height+10,410).setSize(width-height-20,80).setLabel("Celina");
-      cp5.addButton("denis").setPosition(height+10,510).setSize(width-height-20,80).setLabel("Denis");
-      cp5.addButton("marek").setPosition(height+10,610).setSize(width-height-20,80).setLabel("Marek");
-      cp5.addButton("emanuel").setPosition(height+10,710).setSize(width-height-20,80).setLabel("Emanuel");
-      cp5.addButton("jannik").setPosition(height+10,810).setSize(width-height-20,80).setLabel("Jannik");
-      cp5.addButton("maja").setPosition(height+10,910).setSize(width-height-20,80).setLabel("Maja");
-      cp5.addButton("raoul").setPosition(height+10,1010).setSize(width-height-20,80).setLabel("Raoul");
-      cp5.addButton("sven").setPosition(height+10,1110).setSize(width-height-20,80).setLabel("Sven");
+      cp5.addButton("playAnimation").setPosition(height+10,110).setSize(width-height-20,40).setLabel("Play Animation");
+      cp5.addButton("alexandra").setPosition(height+10,160).setSize(width-height-20,40).setLabel("Alexandra");
+      cp5.addButton("celina").setPosition(height+10,210).setSize(width-height-20,40).setLabel("Celina");
+      cp5.addButton("denis").setPosition(height+10,260).setSize(width-height-20,40).setLabel("Denis");
+      cp5.addButton("marek").setPosition(height+10,310).setSize(width-height-20,40).setLabel("Marek");
+      cp5.addButton("emanuel").setPosition(height+10,360).setSize(width-height-20,40).setLabel("Emanuel");
+      cp5.addButton("jannik").setPosition(height+10,410).setSize(width-height-20,40).setLabel("Jannik");
+      cp5.addButton("maja").setPosition(height+10,460).setSize(width-height-20,40).setLabel("Maja");
+      cp5.addButton("raoul").setPosition(height+10,510).setSize(width-height-20,40).setLabel("Raoul");
+      cp5.addButton("sven").setPosition(height+10,560).setSize(width-height-20,40).setLabel("Sven");
       
       
       

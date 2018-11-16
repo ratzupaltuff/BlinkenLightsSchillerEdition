@@ -95,5 +95,26 @@ public void animation3(){
           setAllWhite;
       }
         
+    public void animation5(){ //random colors and animations, random places
+    
+        int i=0;
+    for (int j=0; j<=10; j++){
+      float rcol=random(4);
+      int col=int(rcol);
+      
+      float rrow=random(4);
+      int row=int(rrow);
+      
+       lightMatrix.getLight(col, row).setColor(new Color (i));
+       lightMatrix.getLight(col,row).sendCurrentColor();
+       
+       float ri=random(22);
+       int i=int(ri);
+        
+        delay(120);
+       }
+     setAllWhite(); 
+      
+    }
         
 }

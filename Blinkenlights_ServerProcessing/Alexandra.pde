@@ -116,5 +116,25 @@ public void animation3(){
      setAllWhite(); 
       
     }
-        
+    
+    public void animation6(){
+      for (int j=0; j<=5; j++){
+        for(int i=6; i<22; i++){
+          for (int row=1; row<=3; row++){
+            for (int col=1; col<=3; col++){
+                lightMatrix.getLight(col, row).setColor(new Color (i));
+                if (col==3){
+                    for (int col=1; col<=3;col++){
+                       lightMatrix.getLight(col,row).sendCurrentColor();
+                       lightMatrix.getLight(col,row).sendCurrentColor();
+                        lightMatrix.getLight(col,row).sendCurrentColor();
+                            delay (200);
+                      }
+       
+                }
+            }
+          }
+       } 
+       setAllWhite();
+     }
 }

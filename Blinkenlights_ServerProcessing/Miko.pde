@@ -29,7 +29,7 @@ public void animation(){
 
       }
       
-puplic numberAnimation(int zahl){
+public numberAnimation(int zahl){
 
   if(zahl==1){lightMatrix.getLight(2, 2).setColor(new Color (10));
   

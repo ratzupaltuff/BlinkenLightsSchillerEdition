@@ -88,15 +88,15 @@ public void animation3(){
   public void animation4(){
     
         for (int f=0;i<16;i++){
-          initializeOneColor(9){
+          initializeOneColor(9);
           lightMatrix.getLight(col,row).sendCurrentColor();
-          delay (120)
+          delay (120);
           
           for (int i=16; i<22;i++){
             initializeOneColor(i);
             lightMatrix.getLight(col,row).sendCurrentColor();
 
-            delay(200)
+            delay(200);
             }
           }
           setAllWhite;
@@ -136,7 +136,7 @@ public void animation3(){
                        lightMatrix.getLight(col,row).sendCurrentColor();
                         lightMatrix.getLight(col,row).sendCurrentColor();
                             delay (200);
-                      }
+                    }                  }
        
                 }
             }

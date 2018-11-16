@@ -8,7 +8,7 @@ public Enrico(String name){
   super(name);
 }
 
-public void enricoAnimation(){
+public void enricosAnimation(){
  // animation0();
   animation();
  // animation2();

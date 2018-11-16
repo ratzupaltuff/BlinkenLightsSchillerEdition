@@ -1,4 +1,4 @@
-public class Alexandra extends Animation{
+public class Julius extends Animation{
 
 
 
@@ -10,7 +10,7 @@ String name;
 
 
 
-public Alexandra(String name){
+public Julius(String name){
 
   super(name);
 
@@ -20,7 +20,7 @@ public Alexandra(String name){
 
 
 
-public void alexandrasAnimation(){
+public void juliusAnimation(){
 
  // animation0();
 

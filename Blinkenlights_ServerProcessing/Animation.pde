@@ -40,6 +40,7 @@ public void allOn(){
 }
 
 public void setAllWhite(){
+  initializeOneColor(99);
   initializeOneColor(15);
   setMatrix();
 }

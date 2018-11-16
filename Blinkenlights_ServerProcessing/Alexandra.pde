@@ -17,6 +17,7 @@ public void alexandrasAnimation(){
 //  animation2();
   delay(5000);
  // animation3();
+ //animation4();
  setAllWhite();
 }
 

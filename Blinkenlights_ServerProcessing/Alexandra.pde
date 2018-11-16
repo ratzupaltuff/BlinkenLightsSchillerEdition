@@ -87,19 +87,19 @@ public void animation3(){
 }
   public void animation4(){
     
-        for (int f=0;i<16;i++){
+        for (int i=0;i<16;i++){
           initializeOneColor(9);
-          lightMatrix.getLight(col,row).sendCurrentColor();
+          lightMatrix.getLight(i,i).sendCurrentColor();
           delay (120);
           
-          for (int i=16; i<22;i++){
-            initializeOneColor(i);
-            lightMatrix.getLight(col,row).sendCurrentColor();
+          for (int j=16; j<22;j++){
+            initializeOneColor(j);
+            lightMatrix.getLight(i,i).sendCurrentColor();
 
             delay(200);
             }
           }
-          setAllWhite;
+          setAllWhite();
       }
         
     public void animation5(){ //random colors and animations, random places
@@ -116,7 +116,7 @@ public void animation3(){
        lightMatrix.getLight(col,row).sendCurrentColor();
        
        float ri=random(22);
-       int i=int(ri);
+       j=(int)ri;
         
         delay(120);
        }
@@ -131,7 +131,7 @@ public void animation3(){
             for (int col=1; col<=3; col++){
                 lightMatrix.getLight(col, row).setColor(new Color (i));
                 if (col==3){
-                    for (int col=1; col<=3;col++){
+                    for (col=1; col<=3;col++){
                        lightMatrix.getLight(col,row).sendCurrentColor();
                        lightMatrix.getLight(col,row).sendCurrentColor();
                         lightMatrix.getLight(col,row).sendCurrentColor();

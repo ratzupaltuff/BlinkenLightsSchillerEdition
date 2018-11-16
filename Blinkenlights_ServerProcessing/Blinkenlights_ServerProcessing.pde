@@ -195,9 +195,25 @@ public void sven(){
     sven.svensAnimation();
   } 
   
+ public void miko(){
+    Miko miko = new Miko("Mikos Animationen");
+    miko.mikosAnimation();
+  } 
+
+public void julius(){
+    Julius julius = new Julius("Julius' Animationen");
+    julius.juliusAnimation();
+  } 
   
-
-
+  public void enrico(){
+    Enrico enrico = new Enrico("Enricos Animationen");
+    enrico.enricosAnimation();
+  } 
+  
+  public void lars(){
+    Lars lars = new Lars("Lars' Animationen");
+    lars.larsAnimation();
+  } 
 
 void sendudp(String content){
         println("Tried to send: --> "+ content);

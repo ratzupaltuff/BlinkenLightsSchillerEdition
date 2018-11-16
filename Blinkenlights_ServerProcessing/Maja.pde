@@ -1,3 +1,4 @@
+
 public class Maja extends Animation{
 
 String name;
@@ -18,15 +19,67 @@ public void majasAnimation(){
 
 public void animation(){
   int i=15;
-  for (int col= 3; col>=1; col--){
-        for(int row=3; row>=1;row--){
-        lightMatrix.getLight(col, row).setColor(new Color (i));
-        lightMatrix.getLight(col,row).sendCurrentColor();
-        delay (10000);
+  allOn();
+  initializeOneColor(8);
+  setMatrix();
+  allOff();
+  
+ for (int iamthecountdownbtches = 11; iamthecountdownbtches >= 0; iamthecountdownbtches--)
+ {
+  
+   lightMatrix.getLight(1, 1).setColor(new Color (99));
+   lightMatrix.getLight(3, 1).setColor(new Color (99));
+   lightMatrix.getLight(1, 3).setColor(new Color (99));
+   lightMatrix.getLight(3, 3).setColor(new Color (99));
+   
+   setMatrix();
+   
+ 
+   
+   delay(4000);
+   allOff();
+     lightMatrix.getLight(2, 2).setColor(new Color (99));
+     lightMatrix.getLight(2,2).sendCurrentColor();
+     delay(120);
+     lightMatrix.getLight(2, 2).setColor(new Color (8));
+     lightMatrix.getLight(2,2).sendCurrentColor();
+     delay(4000);
+     
 
       }
-  }
-}
-  
-
+      
+      for ( int dudeyouneedme = 0; dudeyouneedme <= 2; dudeyouneedme++)
+      {
+      
+      //the snake comes to light
+      lightMatrix.getLight(1, 1).setColor(new Color (99));
+      lightMatrix.getLight(1, 2).setColor(new Color (99));
+      lightMatrix.getLight(1, 3).setColor(new Color (99));
+      lightMatrix.getLight(2, 3).setColor(new Color (99));
+      lightMatrix.getLight(2, 2).setColor(new Color (99));
+      lightMatrix.getLight(2, 1).setColor(new Color (99));
+      lightMatrix.getLight(3, 1).setColor(new Color (99));
+      lightMatrix.getLight(3, 2).setColor(new Color (99));
+      lightMatrix.getLight(3, 3).setColor(new Color (99));
+      
+      setMatrix();
+      delay(100);
+      
+      //the snake crawls back
+      lightMatrix.getLight(3, 3).setColor(new Color (99));
+      lightMatrix.getLight(3, 2).setColor(new Color (99));
+      lightMatrix.getLight(3, 1).setColor(new Color (99));
+      lightMatrix.getLight(2, 1).setColor(new Color (99));
+      lightMatrix.getLight(2, 2).setColor(new Color (99));
+      lightMatrix.getLight(2, 3).setColor(new Color (99));
+      lightMatrix.getLight(1, 3).setColor(new Color (99));
+      lightMatrix.getLight(1, 2).setColor(new Color (99));
+      lightMatrix.getLight(1, 1).setColor(new Color (99));
+      
+      setMatrix();
+      delay(200);
+      
+      }
+      
+     }
 }

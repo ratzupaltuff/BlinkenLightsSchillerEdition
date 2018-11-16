@@ -23,8 +23,9 @@ public void setMatrix(){
     lightMatrix.getLight(i,j).setColor(new Color (id));
    }
   }
-  setMatrix();
   delay(120);
+  setMatrix();
+  
 }
 
 public void allOff(){

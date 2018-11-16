@@ -20,7 +20,7 @@ public void alexandrasAnimation(){
  setAllWhite();
 }
 
-public void animation0(){
+/*public void animation0(){
   int i=15;
   for (int col= 3; col>=1; col--){
         for(int row=3; row>=1;row--){
@@ -31,7 +31,7 @@ public void animation0(){
       }
   }
   
-}
+}*/
   
 public void animation1(){
   for (int j = 0; j<10; j++){
@@ -77,4 +77,22 @@ public void animation3(){
   }
 
 }
+  public void animation4(){
+    
+        for (int f=0;i<16;i++){
+          initializeOneColor(9){
+          lightMatrix.getLight(col,row).sendCurrentColor();
+          delay (120)
+          
+          for (int i=16; i<22;i++){
+            initializeOneColor(i);
+            lightMatrix.getLight(col,row).sendCurrentColor();
+
+            delay(200)
+            }
+          }
+          setAllWhite;
+      }
+        
+        
 }

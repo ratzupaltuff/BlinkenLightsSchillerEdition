@@ -17,15 +17,16 @@ public void denisAnimation(){
 }
 
 public void animation(){
-  int i=15;
+ for (int i = 15; row>=0;; i--){
   for (int col= 3; col>=1; col--){
         for(int row=3; row>=1;row--){
         lightMatrix.getLight(col, row).setColor(new Color (i));
         lightMatrix.getLight(col,row).sendCurrentColor();
-        delay (10000);
-
+        delay (500);
       }
   }
+ }
+ setAllWhite();
 }
   
 

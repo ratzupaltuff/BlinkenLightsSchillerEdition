@@ -44,26 +44,12 @@ public void juliusAnimation(){
 
 public void animation0(){
 
-  int i=15;
+     m
 
-  for (int col= 3; col>=1; col--){
+    lightMatrix.getLight(2,2).setColor(new Color (i));
 
-        for(int row=3; row>=1;row--){
-
-        lightMatrix.getLight(col, row).setColor(new Color (i));
-
-        lightMatrix.getLight(col,row).sendCurrentColor();
-
-        delay (200);
-
-
-
-      }
-
-  }
-
-  
-
+    lightMatrix.getLight(2,2).sendCurrentColor();
+    
 }
 
   

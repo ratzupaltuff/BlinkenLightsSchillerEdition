@@ -9,11 +9,26 @@ public Enrico(String name){
 }
 
 public void enricosAnimation(){
- // animation0();
-  animation();
- // animation2();
- // animation3();
+  
+ //animation();
+ //setAllWhite();
+ 
+ allOn();
  setAllWhite();
+ allOff();
+ 
+ S();
+ C();
+ H();
+ I();
+ L();
+ L();
+ E();
+ R();
+ 
+ allOn();
+ setAllWhite();
+ allOff();
 }
 
 public void animation(){
@@ -158,6 +173,36 @@ public void E(){
   lightMatrix.getLight(1,3).setColor(new Color (22)); //bot left
 }
 
+public void R(){
+
+  lightMatrix.getLight(1,1).setColor(new Color (99)); //top left
+  lightMatrix.getLight(1,2).setColor(new Color (99)); //mid left
+  lightMatrix.getLight(1,3).setColor(new Color (99)); //bot left
+  
+  lightMatrix.getLight(2,1).setColor(new Color (99)); //top mid
+  delay(200);
+  lightMatrix.getLight(2,1).setColor(new Color (22)); //top mid
+  
+  lightMatrix.getLight(3,1).setColor(new Color (99)); //top right
+  delay(200);
+  lightMatrix.getLight(3,1).setColor(new Color (22)); //top right
+  
+  lightMatrix.getLight(3,2).setColor(new Color (99)); //mid right
+  delay(200);
+  lightMatrix.getLight(3,2).setColor(new Color (22)); //mid right
+  
+  lightMatrix.getLight(2,2).setColor(new Color (99)); //mid mid
+  delay(200);
+  lightMatrix.getLight(2,2).setColor(new Color (22)); //mid mid
+  
+  lightMatrix.getLight(3,3).setColor(new Color (99)); //bot right
+  delay(200);
+  lightMatrix.getLight(3,3).setColor(new Color (22)); //bot right
+  
+  lightMatrix.getLight(1,1).setColor(new Color (22)); //top left
+  lightMatrix.getLight(1,2).setColor(new Color (22)); //mid left
+  lightMatrix.getLight(1,3).setColor(new Color (22)); //bot left
+}
 
 
 }

@@ -22,123 +22,84 @@ public Julius(String name){
 
 public void juliusAnimation(){
 
- // animation0();
+allOne();
 
- // delay(5000);
+delay(100)
 
-  animation1();
+Punkt();
 
-  delay(5000);
+delay(100)
 
-//  animation2();
+Kreuz();
 
-  delay(5000);
+delay(100)
 
- // animation3();
+Kreis();
 
- setAllWhite();
+delay(100)
+
+Ecken();
+
+delay(100);
 
 }
 
 
+public void allOne(){
 
-public void animation0(){
-
-     m
-
-    lightMatrix.getLight(2,2).setColor(new Color (i));
-
-    lightMatrix.getLight(2,2).sendCurrentColor();
+    initializeOneColor(5);
     
+    setMatrix();
+
 }
 
   
 
-public void animation1(){
+public void Punkt(){
 
-  for (int j = 0; j<10; j++){
+     lightMatrix.getLight(2,2).setColor(new Color (13));
 
-    for (int i=0; i<16;i=i+5){
-
-      for (int col= 3; col>=1; col--){
-
-        for(int row=3; row>=1;row--){
-
-        lightMatrix.getLight(col,row).setColor(new Color (i));
-
-        lightMatrix.getLight(col,row).sendCurrentColor();
-
-        delay(200);
-
-        }
-
-      }
-
-    }
-
-  }
-
-  
+     lightMatrix.getLight(2,2).sendCurrentColor();
+    
 
 }
 
-public void animation2(){
+public void Kreuz(){
 
-  for (int col = 3; col>=1; col--){
+    for (int i = 1; i<=3; i++){
+    
+    lightMatrix.getLight(i,2).setColor(new Color (13));
+    
+    lightMatrix.getLight(i,2).sendCurrentColor();
 
-    for (int row=3; row<=1; col--){
+    lightMatrix.getLight(2,i).setColor(new Color (13));
+    
+    lightMatrix.getLight(2,i).sendCurrentColor();
+}
 
-      for (int i=15; i<=0; i=i-5){
+public void Kreis(){
 
-        lightMatrix.getLight(col, row).setColor(new Color (i));
-
-        lightMatrix.getLight(col,row).sendCurrentColor();
-
-        delay(200);
-
-      }
-
-    }
-
-  }
-
- 
+    initializeOneColor(13);
+    
+    lightMatrix.getLight(2,2).setColor(new Color (5));
+    
+    setMatrix();
 
 }
 
-public void animation3(){
+public void Ecken(){
 
-  int k = 15;
+    for (int i = 1; i<=3; i+2){
 
-  for (int col = 3; col>=1; col--){
+        initiaslizeOneColor(5);
 
-    for (int row=3; row<=1; col--){
-
-        lightMatrix.getLight(col, row).setColor(new Color (k));
-
-        lightMatrix.getLight(col,row).sendCurrentColor();
-
-         delay (300);
-
-         
-
-         
-
-       for (int i=15; i<=0; i=i-5){
-
-        lightMatrix.getLight(col, row).setColor(new Color (i));
-
-        lightMatrix.getLight(col,row).sendCurrentColor();
-
-        delay(200);
-
-      }
-
+        lightMatrix.getLight(i,1).setColor(new Color (13));
+    
+        lightMatrix.getLight(1,i).setColor(new Color (13));
+    
+        lightMatrix.getLight(i,i).setColor(new Color (13));
+    
     }
-
-  }
-
-
 
 }
 

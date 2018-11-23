@@ -17,14 +17,14 @@ public void enricosAnimation(){
  setAllWhite();
  allOff();
  
- /*S();
+ S();
  C();
- H();*/
+ H();
  I();
- /*L();
+ L();
  L();
  E();
- R();*/
+ R();
  
  allOn();
  setAllWhite();
@@ -44,99 +44,99 @@ public void animation(){
 }
 public void S(){
 
-  lightMatrix.getLight(3,1).setColor(new Color (99)); //top right
-  lightMatrix.getLight(3,1).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(3,1).setColor(new Color (22));
-  lightMatrix.getLight(3,1).sendCurrentColor();
+  lightMatrix.getLight(1,3).setColor(new Color (99)); //top right
+  lightMatrix.getLight(1,3).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(1,3).setColor(new Color (22));
+  lightMatrix.getLight(1,3).sendCurrentColor();
   
-  lightMatrix.getLight(2,1).setColor(new Color (99)); //top mid
-  lightMatrix.getLight(2,1).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(2,1).setColor(new Color (22));
-  lightMatrix.getLight(2,1).sendCurrentColor();
-  
-  lightMatrix.getLight(1,1).setColor(new Color (99)); //top left
-  lightMatrix.getLight(1,1).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(1,1).setColor(new Color (22));
-  lightMatrix.getLight(1,1).sendCurrentColor();
-  
-  lightMatrix.getLight(1,2).setColor(new Color (99)); //mid left
+  lightMatrix.getLight(1,2).setColor(new Color (99)); //top mid
   lightMatrix.getLight(1,2).sendCurrentColor();
-  delay(200);
+  delay(500);
   lightMatrix.getLight(1,2).setColor(new Color (22));
   lightMatrix.getLight(1,2).sendCurrentColor();
   
+  lightMatrix.getLight(1,1).setColor(new Color (99)); //top left
+  lightMatrix.getLight(1,1).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(1,1).setColor(new Color (22));
+  lightMatrix.getLight(1,1).sendCurrentColor();
+  
+  lightMatrix.getLight(2,1).setColor(new Color (99)); //mid left
+  lightMatrix.getLight(2,1).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(2,1).setColor(new Color (22));
+  lightMatrix.getLight(2,1).sendCurrentColor();
+  
   lightMatrix.getLight(2,2).setColor(new Color (99)); //mid mid
   lightMatrix.getLight(2,2).sendCurrentColor();
-  delay(200);
+  delay(500);
   lightMatrix.getLight(2,2).setColor(new Color (22));
   lightMatrix.getLight(2,2).sendCurrentColor();
   
-  lightMatrix.getLight(3,2).setColor(new Color (99)); //mid right
-  lightMatrix.getLight(3,2).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(3,2).setColor(new Color (22));
-  lightMatrix.getLight(3,2).sendCurrentColor();
-  
-  lightMatrix.getLight(3,3).setColor(new Color (99)); //bot right
-  lightMatrix.getLight(3,3).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(3,3).setColor(new Color (22));
-  lightMatrix.getLight(3,3).sendCurrentColor();
-  
-  lightMatrix.getLight(2,3).setColor(new Color (99)); //bot mid
+  lightMatrix.getLight(2,3).setColor(new Color (99)); //mid right
   lightMatrix.getLight(2,3).sendCurrentColor();
-  delay(200);
+  delay(500);
   lightMatrix.getLight(2,3).setColor(new Color (22));
   lightMatrix.getLight(2,3).sendCurrentColor();
   
-  lightMatrix.getLight(1,3).setColor(new Color (99)); //bot left
-  lightMatrix.getLight(1,3).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(1,3).setColor(new Color (22));
-  lightMatrix.getLight(1,3).sendCurrentColor();
+  lightMatrix.getLight(3,3).setColor(new Color (99)); //bot right
+  lightMatrix.getLight(3,3).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(3,3).setColor(new Color (22));
+  lightMatrix.getLight(3,3).sendCurrentColor();
+  
+  lightMatrix.getLight(3,2).setColor(new Color (99)); //bot mid
+  lightMatrix.getLight(3,2).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(3,2).setColor(new Color (22));
+  lightMatrix.getLight(3,2).sendCurrentColor();
+  
+  lightMatrix.getLight(3,1).setColor(new Color (99)); //bot left
+  lightMatrix.getLight(3,1).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(3,1).setColor(new Color (22));
+  lightMatrix.getLight(3,1).sendCurrentColor();
 }
 
 public void C(){
 
-  lightMatrix.getLight(3,1).setColor(new Color (99)); //top right
-  lightMatrix.getLight(2,1).setColor(new Color (99)); //top mid
+  lightMatrix.getLight(1,3).setColor(new Color (99)); //top right
+  lightMatrix.getLight(1,2).setColor(new Color (99)); //top mid
   lightMatrix.getLight(1,1).setColor(new Color (99)); //top left
-  lightMatrix.getLight(1,2).setColor(new Color (99)); //mid left
-  lightMatrix.getLight(1,3).setColor(new Color (99)); //bot left
-  lightMatrix.getLight(2,3).setColor(new Color (99)); //bot mid
+  lightMatrix.getLight(2,1).setColor(new Color (99)); //mid left
+  lightMatrix.getLight(3,1).setColor(new Color (99)); //bot left
+  lightMatrix.getLight(3,2).setColor(new Color (99)); //bot mid
   lightMatrix.getLight(3,3).setColor(new Color (99)); //bot right
   setMatrix();
-  delay(1000);
-  lightMatrix.getLight(3,1).setColor(new Color (22)); //top right
-  lightMatrix.getLight(2,1).setColor(new Color (22)); //top mid
+  delay(2000);
+  lightMatrix.getLight(1,3).setColor(new Color (22)); //top right
+  lightMatrix.getLight(1,2).setColor(new Color (22)); //top mid
   lightMatrix.getLight(1,1).setColor(new Color (22)); //top left
-  lightMatrix.getLight(1,2).setColor(new Color (22)); //mid left
-  lightMatrix.getLight(1,3).setColor(new Color (22)); //bot left
-  lightMatrix.getLight(2,3).setColor(new Color (22)); //bot mid
+  lightMatrix.getLight(2,1).setColor(new Color (22)); //mid left
+  lightMatrix.getLight(3,1).setColor(new Color (22)); //bot left
+  lightMatrix.getLight(3,2).setColor(new Color (22)); //bot mid
   lightMatrix.getLight(3,3).setColor(new Color (22)); //bot right
   setMatrix();
 }
 
 public void H(){
 
-  lightMatrix.getLight(3,1).setColor(new Color (99)); //top right
+  lightMatrix.getLight(1,3).setColor(new Color (99)); //top right
   lightMatrix.getLight(1,1).setColor(new Color (99)); //top left
-  lightMatrix.getLight(3,2).setColor(new Color (99)); //mid left
+  lightMatrix.getLight(2,3).setColor(new Color (99)); //mid left
   lightMatrix.getLight(2,2).setColor(new Color (99)); //mid mid
-  lightMatrix.getLight(1,2).setColor(new Color (99)); //mid right
-  lightMatrix.getLight(1,3).setColor(new Color (99)); //bot left
+  lightMatrix.getLight(2,1).setColor(new Color (99)); //mid right
+  lightMatrix.getLight(3,1).setColor(new Color (99)); //bot left
   lightMatrix.getLight(3,3).setColor(new Color (99)); //bot right
   setMatrix();
-  delay(1000);
-  lightMatrix.getLight(3,1).setColor(new Color (22)); //top right
+  delay(2000);
+  lightMatrix.getLight(1,3).setColor(new Color (22)); //top right
   lightMatrix.getLight(1,1).setColor(new Color (22)); //top left
-  lightMatrix.getLight(3,2).setColor(new Color (22)); //mid left
+  lightMatrix.getLight(2,3).setColor(new Color (22)); //mid left
   lightMatrix.getLight(2,2).setColor(new Color (22)); //mid mid
-  lightMatrix.getLight(1,2).setColor(new Color (22)); //mid right
-  lightMatrix.getLight(1,3).setColor(new Color (22)); //bot left
+  lightMatrix.getLight(2,1).setColor(new Color (22)); //mid right
+  lightMatrix.getLight(3,1).setColor(new Color (22)); //bot left
   lightMatrix.getLight(3,3).setColor(new Color (22)); //bot right
   setMatrix();
 }
@@ -157,16 +157,16 @@ public void I(){
 public void L(){
 
   lightMatrix.getLight(1,1).setColor(new Color (99)); //top left
-  lightMatrix.getLight(1,2).setColor(new Color (99)); //mid left
-  lightMatrix.getLight(1,3).setColor(new Color (99)); //bot left
-  lightMatrix.getLight(2,3).setColor(new Color (99)); //bot mid
+  lightMatrix.getLight(2,1).setColor(new Color (99)); //mid left
+  lightMatrix.getLight(3,1).setColor(new Color (99)); //bot left
+  lightMatrix.getLight(3,2).setColor(new Color (99)); //bot mid
   lightMatrix.getLight(3,3).setColor(new Color (99)); //bot right
   setMatrix();
   delay(1000);
   lightMatrix.getLight(1,1).setColor(new Color (22)); //top left
-  lightMatrix.getLight(1,2).setColor(new Color (22)); //mid left
-  lightMatrix.getLight(1,3).setColor(new Color (22)); //bot left
-  lightMatrix.getLight(2,3).setColor(new Color (22)); //bot mid
+  lightMatrix.getLight(2,1).setColor(new Color (22)); //mid left
+  lightMatrix.getLight(3,1).setColor(new Color (22)); //bot left
+  lightMatrix.getLight(3,2).setColor(new Color (22)); //bot mid
   lightMatrix.getLight(3,3).setColor(new Color (22)); //bot right
   setMatrix();
 }
@@ -174,92 +174,94 @@ public void L(){
 public void E(){
 
   lightMatrix.getLight(1,1).setColor(new Color (99)); //top left
-  lightMatrix.getLight(1,2).setColor(new Color (99)); //mid left
-  lightMatrix.getLight(1,3).setColor(new Color (99)); //bot left
+  lightMatrix.getLight(2,1).setColor(new Color (99)); //mid left
+  lightMatrix.getLight(3,1).setColor(new Color (99)); //bot left
   setMatrix();
   delay(500);
   
-  lightMatrix.getLight(2,1).setColor(new Color (99)); //top mid
-  lightMatrix.getLight(2,1).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(2,1).setColor(new Color (22)); //top mid
-  lightMatrix.getLight(2,1).sendCurrentColor();
+  lightMatrix.getLight(1,2).setColor(new Color (99)); //top mid
+  lightMatrix.getLight(1,2).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(1,2).setColor(new Color (22)); //top mid
+  lightMatrix.getLight(1,2).sendCurrentColor();
   
-  lightMatrix.getLight(3,1).setColor(new Color (99)); //top right
-  lightMatrix.getLight(3,1).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(3,1).setColor(new Color (22)); //top right
-  lightMatrix.getLight(3,1).sendCurrentColor();
+  lightMatrix.getLight(1,3).setColor(new Color (99)); //top right
+  lightMatrix.getLight(1,3).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(1,3).setColor(new Color (22)); //top right
+  lightMatrix.getLight(1,3).sendCurrentColor();
   
   lightMatrix.getLight(2,2).setColor(new Color (99)); //mid mid
   lightMatrix.getLight(2,2).sendCurrentColor();
-  delay(200);
+  delay(500);
   lightMatrix.getLight(2,2).setColor(new Color (22)); //mid mid
   lightMatrix.getLight(2,2).sendCurrentColor();
   
-  lightMatrix.getLight(3,2).setColor(new Color (99)); //mid right
-  lightMatrix.getLight(3,2).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(3,2).setColor(new Color (22)); //mid right
-  lightMatrix.getLight(3,2).sendCurrentColor();
+  lightMatrix.getLight(2,3).setColor(new Color (99)); //mid right
+  lightMatrix.getLight(2,3).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(2,3).setColor(new Color (22)); //mid right
+  lightMatrix.getLight(2,3).sendCurrentColor();
   
-  lightMatrix.getLight(2,3).setColor(new Color (99)); //bot mid
-  lightMatrix.getLight(2,3).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(2,3).setColor(new Color (22)); //bot mid
-  lightMatrix.getLight(2,3).sendCurrentColor();
+  lightMatrix.getLight(3,2).setColor(new Color (99)); //bot mid
+  lightMatrix.getLight(3,2).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(3,2).setColor(new Color (22)); //bot mid
+  lightMatrix.getLight(3,2).sendCurrentColor();
   
   lightMatrix.getLight(3,3).setColor(new Color (99)); //bot right
   lightMatrix.getLight(3,3).sendCurrentColor();
-  delay(200);
+  delay(500);
   lightMatrix.getLight(3,3).setColor(new Color (22)); //bot right
   lightMatrix.getLight(3,3).sendCurrentColor();
   
   lightMatrix.getLight(1,1).setColor(new Color (22)); //top left
-  lightMatrix.getLight(1,2).setColor(new Color (22)); //mid left
-  lightMatrix.getLight(1,3).setColor(new Color (22)); //bot left
+  lightMatrix.getLight(2,1).setColor(new Color (22)); //mid left
+  lightMatrix.getLight(3,1).setColor(new Color (22)); //bot left
   setMatrix();
 }
 
 public void R(){
 
   lightMatrix.getLight(1,1).setColor(new Color (99)); //top left
-  lightMatrix.getLight(1,2).setColor(new Color (99)); //mid left
-  lightMatrix.getLight(1,3).setColor(new Color (99)); //bot left
+  lightMatrix.getLight(2,1).setColor(new Color (99)); //mid left
+  lightMatrix.getLight(3,1).setColor(new Color (99)); //bot left
+  setMatrix();
+  delay(500);
   
-  lightMatrix.getLight(2,1).setColor(new Color (99)); //top mid
-  lightMatrix.getLight(2,1).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(2,1).setColor(new Color (22)); //top mid
-  lightMatrix.getLight(2,1).sendCurrentColor();
+  lightMatrix.getLight(1,2).setColor(new Color (99)); //top mid
+  lightMatrix.getLight(1,2).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(1,2).setColor(new Color (22)); //top mid
+  lightMatrix.getLight(1,2).sendCurrentColor();
   
-  lightMatrix.getLight(3,1).setColor(new Color (99)); //top right
-  lightMatrix.getLight(3,1).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(3,1).setColor(new Color (22)); //top right
-  lightMatrix.getLight(3,1).sendCurrentColor();
+  lightMatrix.getLight(1,3).setColor(new Color (99)); //top right
+  lightMatrix.getLight(1,3).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(1,3).setColor(new Color (22)); //top right
+  lightMatrix.getLight(1,3).sendCurrentColor();
   
-  lightMatrix.getLight(3,2).setColor(new Color (99)); //mid right
-  lightMatrix.getLight(3,2).sendCurrentColor();
-  delay(200);
-  lightMatrix.getLight(3,2).setColor(new Color (22)); //mid right
-  lightMatrix.getLight(3,2).sendCurrentColor();
+  lightMatrix.getLight(2,3).setColor(new Color (99)); //mid right
+  lightMatrix.getLight(2,3).sendCurrentColor();
+  delay(500);
+  lightMatrix.getLight(2,3).setColor(new Color (22)); //mid right
+  lightMatrix.getLight(2,3).sendCurrentColor();
   
   lightMatrix.getLight(2,2).setColor(new Color (99)); //mid mid
   lightMatrix.getLight(2,2).sendCurrentColor();
-  delay(200);
+  delay(500);
   lightMatrix.getLight(2,2).setColor(new Color (22)); //mid mid
   lightMatrix.getLight(2,2).sendCurrentColor();
   
   lightMatrix.getLight(3,3).setColor(new Color (99)); //bot right
   lightMatrix.getLight(3,3).sendCurrentColor();
-  delay(200);
+  delay(500);
   lightMatrix.getLight(3,3).setColor(new Color (22)); //bot right
   lightMatrix.getLight(3,3).sendCurrentColor();
   
   lightMatrix.getLight(1,1).setColor(new Color (22)); //top left
-  lightMatrix.getLight(1,2).setColor(new Color (22)); //mid left
-  lightMatrix.getLight(1,3).setColor(new Color (22)); //bot left
+  lightMatrix.getLight(2,1).setColor(new Color (22)); //mid left
+  lightMatrix.getLight(3,1).setColor(new Color (22)); //bot left
   setMatrix();
 }
 

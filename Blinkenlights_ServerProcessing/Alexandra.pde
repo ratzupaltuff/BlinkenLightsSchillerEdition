@@ -74,14 +74,14 @@ public void animation3(){
         setAllWhite();
          
        for (int i=15; i<=0; i=i-5){
-        lightMatrix.getLight(col, row).setColor(new Color (i));
-        lightMatrix.getLight(col,row).sendCurrentColor();
+        lightMatrix.getLight(1, 1).setColor(new Color (i));
+        lightMatrix.getLight(1,1).sendCurrentColor();
         delay(200);
       }
     }
-  }
+  
 
-}
+
   public void animation4(){
     
         for (int i=0;i<16;i++){

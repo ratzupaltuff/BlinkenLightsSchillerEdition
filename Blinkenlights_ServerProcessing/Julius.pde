@@ -24,23 +24,23 @@ public void juliusAnimation(){
 
 allOne();
 
-delay(100)
+delay(3000);
 
 Punkt();
 
-delay(100)
+delay(3000);
 
 Kreuz();
 
-delay(100)
+delay(3000);
 
 Kreis();
 
-delay(100)
+delay(3000);
 
 Ecken();
 
-delay(100);
+delay(3000);
 
 }
 
@@ -76,7 +76,7 @@ public void Kreuz(){
     
     lightMatrix.getLight(2,i).sendCurrentColor();
 }
-
+}
 public void Kreis(){
 
     initializeOneColor(13);
@@ -89,9 +89,9 @@ public void Kreis(){
 
 public void Ecken(){
 
-    for (int i = 1; i<=3; i+2){
+    for (int i = 1; i<=3; i=+2){
 
-        initiaslizeOneColor(5);
+        initializeOneColor(5);
 
         lightMatrix.getLight(i,1).setColor(new Color (13));
     

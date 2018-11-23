@@ -17,9 +17,9 @@ public void denisAnimation(){
 }
 
 public void animation(){
- int random = Math.random();
+ int random = (int)Math.random();
  if(random % 2 ==0){
-    for(int i = 0; i <= 15; i+2){
+    for(int i = 0; i <= 15; i=+2){
       for (int col= 3; col>=1; col--){
         for(int row=3; row>=1;row--){
         lightMatrix.getLight(col, row).setColor(new Color (i));
@@ -28,10 +28,11 @@ public void animation(){
       }
     }
   }
- setAllWhite();
-}
+ }
+ 
+
   else{
-    for(int i = 1; i<=15; i+2){  
+    for(int i = 1; i<=15; i=+2){  
       for (int col= 3; col>=1; col--){
         for(int row=3; row>=1;row--){
           lightMatrix.getLight(col, row).setColor(new Color (i));
@@ -40,8 +41,8 @@ public void animation(){
      }
     }
    }
+   setAllWhite();
   }
 
-
-
+}
 }

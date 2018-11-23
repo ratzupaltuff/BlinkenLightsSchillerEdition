@@ -17,14 +17,14 @@ public void enricosAnimation(){
  setAllWhite();
  allOff();
  
- S();
+ /*S();
  C();
- H();
+ H();*/
  I();
- L();
+ /*L();
  L();
  E();
- R();
+ R();*/
  
  allOn();
  setAllWhite();
@@ -143,14 +143,14 @@ public void H(){
 
 public void I(){
 
-  lightMatrix.getLight(2,1).setColor(new Color (99)); //top mid
+  lightMatrix.getLight(1,2).setColor(new Color (99)); //top mid
   lightMatrix.getLight(2,2).setColor(new Color (99)); //mid mid
-  lightMatrix.getLight(2,3).setColor(new Color (99)); //bot mid
+  lightMatrix.getLight(3,2).setColor(new Color (99)); //bot mid
   setMatrix();
   delay(1000);
-  lightMatrix.getLight(2,1).setColor(new Color (22)); //top mid
+  lightMatrix.getLight(1,2).setColor(new Color (22)); //top mid
   lightMatrix.getLight(2,2).setColor(new Color (22)); //mid mid
-  lightMatrix.getLight(2,3).setColor(new Color (22)); //bot mid
+  lightMatrix.getLight(3,2).setColor(new Color (22)); //bot mid
   setMatrix();
 }
 

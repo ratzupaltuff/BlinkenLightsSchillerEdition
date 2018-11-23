@@ -17,17 +17,31 @@ public void denisAnimation(){
 }
 
 public void animation(){
- for (int i = 15; row>=0;; i--){
-  for (int col= 3; col>=1; col--){
+ int random = Math.random();
+ if(random % 2 ==0){
+    for(int i = 0; i <= 15; i+2){
+      for (int col= 3; col>=1; col--){
         for(int row=3; row>=1;row--){
         lightMatrix.getLight(col, row).setColor(new Color (i));
         lightMatrix.getLight(col,row).sendCurrentColor();
-        delay (500);
+        delay (250);
       }
+    }
   }
- }
  setAllWhite();
 }
-  
+  else{
+    for(int i = 1; i<=15; i+2){  
+      for (int col= 3; col>=1; col--){
+        for(int row=3; row>=1;row--){
+          lightMatrix.getLight(col, row).setColor(new Color (i));
+          lightMatrix.getLight(col,row).sendCurrentColor();
+          delay (250);
+     }
+    }
+   }
+  }
+
+
 
 }

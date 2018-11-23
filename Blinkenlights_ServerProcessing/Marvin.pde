@@ -18,6 +18,9 @@ public void marvinsAnimation(){
  allOff();
  
  Marvin();
+ delay(1000);
+ setAllWhite();
+ delay(1000);
  Marvins();
  
  allOn();

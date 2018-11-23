@@ -49,6 +49,31 @@ public void setAllWhite(){
 public void animation(){
 allOn();
 
+Alexandra alexandra = new Alexandra("Alexandras Animationen");
+Celina celina = new Celina("Celinas Animationen");
+Denis denis = new Denis("Denis' Animationen");
+Marek marek = new Marek("Mareks Animationen");
+Emanuel emanuel = new Emanuel("Emanuels Animationen");
+Maja maja = new Maja("Majas Animationen");
+Jannik jannik = new Jannik("Janniks Animationen");
+Raoul raoul = new Raoul("Raouls Animationen");
+Sven sven = new Sven("Svens' Animationen");
+Miko miko = new Miko("Mikos Animationen");
+Julius julius = new Julius("Julius' Animationen");
+Enrico enrico = new Enrico("Enricos Animationen");
+Marvin marvin = new Marvin("Marvins Animationen");
+
+while(true){
+enrico.enricosAnimation();
+maja.majasAnimation();
+miko.mikosAnimation();
+marek.mareksAnimation();
+
+delay(10000);
+
+//julius.juliusAnimation();
+
+
  for(int j = 0; j<10; j++){
   for(int i=0; i<6; i=i+5){
     //Color red = new Color(i);
@@ -57,11 +82,11 @@ allOn();
         lightMatrix.getLight(col,row).setColor(new Color(i));
         lightMatrix.getLight(col,row).sendCurrentColor();
           delay(120);
-      }
+      }}
     }
   }
   //  delay(250);
-  }
+  } 
 }
 
 

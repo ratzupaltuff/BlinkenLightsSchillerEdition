@@ -1,10 +1,10 @@
-public class Denis extends Animation{
+public class Marvin extends Animation{
 
 String name;
 //int col=3;
 //int row=3;
 
-public Denis(String name){
+public Marvin(String name){
   super(name);
 }
 

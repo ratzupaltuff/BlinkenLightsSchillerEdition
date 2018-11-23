@@ -2,7 +2,7 @@ public class Marek extends Animation{
 
 String name;
 
-int shortDelay=120;
+int shortDelay=250;
 //int col=3;
 //int row=3;
 
@@ -13,7 +13,7 @@ int shortDelay=120;
 public void mareksAnimation(){
  
   colorColsandRows();
- // strobe();
+  strobe();
   setAllWhite();
   // animation0();
 //  animation1();
@@ -25,7 +25,7 @@ public void mareksAnimation(){
 public void strobe(){
   initializeOneColor(16);
   setMatrix();
-  delay(20000);
+  delay(10000);
   
 }
 

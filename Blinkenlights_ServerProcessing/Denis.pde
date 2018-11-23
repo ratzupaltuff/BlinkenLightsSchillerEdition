@@ -24,7 +24,7 @@ public void animation(){
         for(int row=3; row>=1;row--){
         lightMatrix.getLight(col, row).setColor(new Color (i));
         lightMatrix.getLight(col,row).sendCurrentColor();
-        delay (250);
+        delay (333);
       }
     }
   }
@@ -37,11 +37,11 @@ public void animation(){
         for(int row=3; row>=1;row--){
           lightMatrix.getLight(col, row).setColor(new Color (i));
           lightMatrix.getLight(col,row).sendCurrentColor();
-          delay (250);
+          delay (333);
      }
     }
    }
-   setAllWhite();
+   
   }
 
 }

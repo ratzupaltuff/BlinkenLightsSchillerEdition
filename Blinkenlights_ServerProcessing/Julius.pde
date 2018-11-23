@@ -22,7 +22,7 @@ public Julius(String name){
 
 public void juliusAnimation(){
 
-allOne();
+allOn();
 
 delay(3000);
 

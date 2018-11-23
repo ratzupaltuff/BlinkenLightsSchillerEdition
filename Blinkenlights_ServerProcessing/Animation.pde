@@ -65,8 +65,11 @@ Marvin marvin = new Marvin("Marvins Animationen");
 
 while(true){
 enrico.enricosAnimation();
+delay(10000);
 maja.majasAnimation();
+delay(10000);
 miko.mikosAnimation();
+delay(10000);
 marek.mareksAnimation();
 
 delay(10000);

@@ -1,9 +1,4 @@
-public class Julius extends Animation{
-
-
-
-String name;
-
+public class Julius extends Ad pr
 //int col=3;
 
 //int row=3;
